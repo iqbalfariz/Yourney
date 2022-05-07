@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Yourney</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yourney">YOURNEY</string>
+    <string name="ketahui_potensi_dalam_dirimu_dengan_mudah">Ketahui Potensi Dalam Dirimu Dengan Mudah</string>
+    <string name="content_screen1">Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.</string>
+    <string name="lewati">Lewati</string>
+    <string name="next">Lanjut</string>
 </resources>
