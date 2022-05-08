@@ -1,19 +1,44 @@
 package com.izo.yourney.ui.onboarding.screens
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.viewpager2.widget.ViewPager2
 import com.izo.yourney.R
+import com.izo.yourney.databinding.FragmentFourthScreenBinding
+import com.izo.yourney.ui.MainActivity
 
 class FourthScreen : Fragment() {
+
+    private var _binding: FragmentFourthScreenBinding? = null
+    private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fourth_screen, container, false)
+        _binding = FragmentFourthScreenBinding.inflate(inflater, container, false)
+        val view = binding?.root
+
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.view_pager)
+
+
+        binding?.tvNext?.setOnClickListener {
+            val intentToMain = Intent(requireActivity(), MainActivity::class.java)
+            startActivity(intentToMain)
+            requireActivity().finish()
+        }
+
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
