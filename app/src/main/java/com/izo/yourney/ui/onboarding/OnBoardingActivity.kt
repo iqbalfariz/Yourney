@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.core.view.size
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityOnBoardingBinding
 import com.izo.yourney.ui.MainActivity
@@ -88,6 +89,7 @@ class OnBoardingActivity : AppCompatActivity() {
             finish()
         }
 
+
     }
 
     private fun setCurrentIndicator(index: Int) {
@@ -98,14 +100,14 @@ class OnBoardingActivity : AppCompatActivity() {
                 imageView.setImageDrawable(
                     ContextCompat.getDrawable(
                         applicationContext,
-                        R.drawable.ellipse_active
+                        R.drawable.indicator_active
                     )
                 )
             } else {
                 imageView.setImageDrawable(
                     ContextCompat.getDrawable(
                         applicationContext,
-                        R.drawable.ellipse_inactive
+                        R.drawable.indicator_inactive
                     )
                 )
             }
@@ -122,7 +124,7 @@ class OnBoardingActivity : AppCompatActivity() {
                 this?.setImageDrawable(
                     ContextCompat.getDrawable(
                         applicationContext,
-                        R.drawable.ellipse_inactive
+                        R.drawable.indicator_inactive
                     )
                 )
                 this?.layoutParams = layoutParams
