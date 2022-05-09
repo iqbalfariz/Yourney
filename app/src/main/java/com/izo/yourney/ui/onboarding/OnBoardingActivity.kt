@@ -56,6 +56,7 @@ class OnBoardingActivity : AppCompatActivity() {
         setContentView(binding.root)
         setUpView()
 
+
         val viewPager = binding.viewPager
 
         viewPager.adapter = viewPagerAdapter
