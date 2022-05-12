@@ -11,4 +11,6 @@
     <string name="intro_login">Hai, Selamat \n Datang Kembali !</string>
     <string name="content_btnFb">Masuk dengan Facebook</string>
     <string name="content_btnGoogle">Masuk dengan Google</string>
+    <string name="intro_regis">Hai! \n Selamat Datang...</string>
+    <string name="content_checkbox">Saya setuju dengan Ketentuan Penggunaan dan Kebijakan \n Privasi Yourney</string>
 </resources>
