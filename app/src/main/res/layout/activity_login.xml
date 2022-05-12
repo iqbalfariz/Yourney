@@ -193,7 +193,7 @@
             android:textSize="12dp"
             app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
             app:layout_constraintStart_toStartOf="@id/guidelineVertical"
-            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+            app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
         <Button
             android:id="@+id/btn_facebook"
