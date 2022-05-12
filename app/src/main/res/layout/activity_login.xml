@@ -59,14 +59,14 @@
         android:id="@+id/layout_under"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_top"
-        android:background="@drawable/rectangle_regis"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        >
+        android:background="@drawable/rectangle_regis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_top">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineVertical"
@@ -81,46 +81,46 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-            app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/linotte_bold"
+            android:text="Login"
             android:textColor="@color/blue_font_yourney"
             android:textSize="24sp"
-            />
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="19dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/linotte_semi_bold"
-            android:textSize="14sp"
+            android:text="Username"
             android:textColor="@color/blue_font_yourney"
-            />
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <EditText
             android:id="@+id/ed_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/coloumn_bg"
-            android:hint="Masukkan username anda"
-            android:drawableStart="@drawable/ic_person"
-            android:padding="10dp"
-            android:drawablePadding="5dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView4"
             android:layout_marginStart="19dp"
-            android:layout_marginEnd="19dp"
             android:layout_marginTop="3dp"
-            />
+            android:layout_marginEnd="19dp"
+            android:background="@drawable/coloumn_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/linotte_regular"
+            android:hint="Masukkan username anda"
+            android:padding="10dp"
+            android:textColor="@color/blue_font_yourney"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4" />
 
         <TextView
             android:id="@+id/textView5"
@@ -128,10 +128,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
             android:layout_marginTop="12dp"
-            android:text="Kata Sandi"
             android:fontFamily="@font/linotte_semi_bold"
-            android:textSize="14sp"
+            android:text="Kata Sandi"
             android:textColor="@color/blue_font_yourney"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ed_email" />
 
@@ -139,18 +139,20 @@
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan password anda"
-            android:padding="10dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="19dp"
+            android:background="@drawable/coloumn_bg"
             android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="5dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/linotte_regular"
+            android:hint="Masukkan password anda"
+            android:padding="10dp"
+            android:textColor="@color/blue_font_yourney"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView5"
-            android:background="@drawable/coloumn_bg"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="19dp"
-            android:layout_marginTop="3dp"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView5" />
 
         <TextView
             android:id="@+id/textView6"
@@ -158,13 +160,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="19dp"
-            android:text="@string/forget"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ed_password"
             android:fontFamily="@font/linotte_semi_bold"
-            android:textSize="14sp"
+            android:text="@string/forget"
             android:textColor="@color/blue_font_yourney"
-            />
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ed_password" />
 
         <Button
             android:id="@+id/btn_login"
@@ -186,10 +187,10 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/linotte_light"
             android:text="Atau"
             android:textSize="12dp"
-            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
             app:layout_constraintStart_toStartOf="@id/guidelineVertical"
             app:layout_constraintTop_toBottomOf="@+id/btn_login" />
@@ -204,9 +205,9 @@
             android:backgroundTint="@color/blue_facebook"
             android:fontFamily="@font/linotte_bold"
             android:text="@string/content_btnFb"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="14sp"
-            android:textAlignment="center"
             app:cornerRadius="8dp"
             app:icon="@drawable/icon_facebook"
             app:layout_constraintEnd_toEndOf="parent"
@@ -228,9 +229,9 @@
             android:shadowColor="#A6A9B6"
             android:shadowRadius="0.25"
             android:text="@string/content_btnGoogle"
+            android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:textAllCaps="false"
 
             app:cornerRadius="8dp"
             app:icon="@drawable/icon_google"
