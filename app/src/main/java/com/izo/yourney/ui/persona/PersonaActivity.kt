@@ -20,6 +20,7 @@ class PersonaActivity : AppCompatActivity() {
         binding.btnStart.setOnClickListener {
             val intent = Intent(this, AboutOneActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

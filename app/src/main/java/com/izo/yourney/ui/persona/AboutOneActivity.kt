@@ -43,6 +43,7 @@ class AboutOneActivity : AppCompatActivity() {
         binding.btnStart.setOnClickListener {
             val intent = Intent(this, AboutTwoActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
