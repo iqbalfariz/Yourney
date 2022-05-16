@@ -15,9 +15,12 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.core.view.size
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityOnBoardingBinding
+
 import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.register.RegisterActivity
 
 class OnBoardingActivity : AppCompatActivity() {
 
@@ -31,18 +34,18 @@ class OnBoardingActivity : AppCompatActivity() {
                 R.drawable.image_page1
             ),
             IntroSlide(
-                "Ketahui Potensi Dalam Dirimu Dengan Mudah",
-                "Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.",
+                "Buat Harimu Lebih Produktif Dengan Mencatat Jadwal",
+                "Aplikasi YOURNEY membantumu dalam membuat jadwal harian maupun jadwal lain agar lebih mempermudah kamu dalam beraktivitas.",
                 R.drawable.image_page2
             ),
             IntroSlide(
-                "Ketahui Potensi Dalam Dirimu Dengan Mudah",
-                "Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.",
+                "Gapai Masa Depan Bersama Ney Smart Virtual Assistant",
+                "Aplikasi YOURNEY memiliki smart virtual assistant yang dapat membantu kamu dalam memberi tahu dan merekomendasikan minat kamu untuk mencapai masa depan dengan kemampuan yang sesuai. ",
                 R.drawable.image_page3
             ),
             IntroSlide(
-                "Ketahui Potensi Dalam Dirimu Dengan Mudah",
-                "Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.",
+                "Konsultasikan Masalahmu dengan Konselor",
+                "Aplikasi YOURNEY memiliki layanan konsultasi untuk membantu kamu menyelesaikan permasalahan yang sedang kamu alami dalam menggapai mimpimu.",
                 R.drawable.image_page4
             )
         )
@@ -53,6 +56,7 @@ class OnBoardingActivity : AppCompatActivity() {
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpView()
+
 
         val viewPager = binding.viewPager
 
@@ -67,7 +71,7 @@ class OnBoardingActivity : AppCompatActivity() {
                 super.onPageSelected(position)
                 setCurrentIndicator(position)
             }
-            }
+        }
         )
 
         // change page
@@ -75,7 +79,7 @@ class OnBoardingActivity : AppCompatActivity() {
             if (viewPager.currentItem + 1 < viewPagerAdapter.itemCount) {
                 viewPager.currentItem += 1
             } else {
-                val intentToMain = Intent(this, MainActivity::class.java)
+                val intentToMain = Intent(this, RegisterActivity::class.java)
                 startActivity(intentToMain)
                 finish()
             }
@@ -83,10 +87,11 @@ class OnBoardingActivity : AppCompatActivity() {
 
         // skip page
         binding.tvPass.setOnClickListener {
-            val intentToMain = Intent(this, MainActivity::class.java)
+            val intentToMain = Intent(this, RegisterActivity::class.java)
             startActivity(intentToMain)
             finish()
         }
+
 
     }
 
@@ -98,14 +103,14 @@ class OnBoardingActivity : AppCompatActivity() {
                 imageView.setImageDrawable(
                     ContextCompat.getDrawable(
                         applicationContext,
-                        R.drawable.ellipse_active
+                        R.drawable.indicator_active
                     )
                 )
             } else {
                 imageView.setImageDrawable(
                     ContextCompat.getDrawable(
                         applicationContext,
-                        R.drawable.ellipse_inactive
+                        R.drawable.indicator_inactive
                     )
                 )
             }
@@ -113,16 +118,17 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun setUpIndicators() {
-        val  indicators = arrayOfNulls<ImageView>(viewPagerAdapter.itemCount)
-        val layoutParams: LinearLayout.LayoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
-        layoutParams.setMargins(8,0,8, 0)
+        val indicators = arrayOfNulls<ImageView>(viewPagerAdapter.itemCount)
+        val layoutParams: LinearLayout.LayoutParams =
+            LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        layoutParams.setMargins(8, 0, 8, 0)
         for (i in indicators.indices) {
             indicators[i] = ImageView(applicationContext)
             indicators[i].apply {
                 this?.setImageDrawable(
                     ContextCompat.getDrawable(
                         applicationContext,
-                        R.drawable.ellipse_inactive
+                        R.drawable.indicator_inactive
                     )
                 )
                 this?.layoutParams = layoutParams
