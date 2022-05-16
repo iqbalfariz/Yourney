@@ -26,7 +26,7 @@
         android:layout_marginTop="38dp"
         android:fontFamily="@font/linotte_bold"
         android:text="@string/yourney"
-        android:textColor="#A0A1D0"
+        android:textColor="@color/blue_font_yourney"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@id/iv_logo"
         app:layout_constraintTop_toTopOf="parent" />

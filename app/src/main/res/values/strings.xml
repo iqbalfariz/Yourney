@@ -7,4 +7,12 @@
     <string name="content_screen1">Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.</string>
     <string name="lewati">Lewati</string>
     <string name="next">Lanjut</string>
+    <string name="forget">Lupa Kata Sandi ?</string>
+    <string name="intro_login">Hai, Selamat \n Datang Kembali !</string>
+    <string name="content_btnFb">Masuk dengan Facebook</string>
+    <string name="content_btnGoogle">Masuk dengan Google</string>
+    <string name="intro_regis">Hai! \n Selamat Datang..</string>
+    <string name="content_checkbox">Saya setuju dengan Ketentuan Penggunaan dan Kebijakan Privasi Yourney</string>
+    <string name="halo_naili">Halo, Naili</string>
+    <string name="content_signUpIntro">Aku adalah <b> Ney </b> Smart Virtual assistant yang dapat menjadi temanmu dalam meraih masa depan yang kamu inginkan. Bantu aku untuk mengenalmu lebih dalam yuk!</string>
 </resources>
