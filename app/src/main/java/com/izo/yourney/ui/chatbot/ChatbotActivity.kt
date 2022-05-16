@@ -3,6 +3,7 @@ package com.izo.yourney.ui.chatbot
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityChatbotBinding
@@ -20,6 +21,8 @@ class ChatbotActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         chatbotBinding = ActivityChatbotBinding.inflate(layoutInflater)
         setContentView(chatbotBinding.root)
+        supportActionBar?.title = "Chatbot"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         recyclerView()
 
@@ -84,5 +87,12 @@ class ChatbotActivity : AppCompatActivity() {
                 chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressed()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
