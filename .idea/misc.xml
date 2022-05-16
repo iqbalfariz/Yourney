@@ -4,14 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.122" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/button_bg.xml" value="0.1205" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/button_facebook_bg.xml" value="0.1205" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/button_google_bg.xml" value="0.1205" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/coloumn_bg.xml" value="0.1205" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.114" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/button_google_bg.xml" value="0.1145" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/circle_bg.xml" value="0.1145" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/circle_not_pick_bg.xml" value="0.1145" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/ic_icon_2.xml" value="0.122" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/ic_launcher_background.xml" value="0.122" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/ic_lock.xml" value="0.114" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/icon_1.xml" value="0.122" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/indicator_active.xml" value="0.129" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/indicator_inactive.xml" value="0.129" />
@@ -27,12 +24,13 @@
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_first_screen.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_fourth_screen.xml" value="0.19021739130434784" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_intro.xml" value="0.20471014492753623" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_second_screen.xml" value="0.4" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_third_screen.xml" value="0.32525951557093424" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_view_pager.xml" value="0.2265625" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/message_item.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/slide_item_container.xml" value="0.176" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/test.xml" value="0.264" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/test.xml" value="0.16621376811594202" />
       </map>
     </option>
   </component>

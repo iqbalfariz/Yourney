@@ -10,8 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
-            android:name=".ui.chatbot.ChatbotActivity"
+            android:name=".AboutThreeActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.persona.AboutTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.persona.AboutOneActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Yourney.NoActionBar" />
         <activity
             android:name=".ui.persona.PersonaActivity"
             android:exported="false"
