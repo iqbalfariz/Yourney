@@ -20,6 +20,7 @@ import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityOnBoardingBinding
 
 import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.register.RegisterActivity
 
 class OnBoardingActivity : AppCompatActivity() {
 
@@ -78,7 +79,7 @@ class OnBoardingActivity : AppCompatActivity() {
             if (viewPager.currentItem + 1 < viewPagerAdapter.itemCount) {
                 viewPager.currentItem += 1
             } else {
-                val intentToMain = Intent(this, MainActivity::class.java)
+                val intentToMain = Intent(this, RegisterActivity::class.java)
                 startActivity(intentToMain)
                 finish()
             }
@@ -86,7 +87,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
         // skip page
         binding.tvPass.setOnClickListener {
-            val intentToMain = Intent(this, MainActivity::class.java)
+            val intentToMain = Intent(this, RegisterActivity::class.java)
             startActivity(intentToMain)
             finish()
         }
