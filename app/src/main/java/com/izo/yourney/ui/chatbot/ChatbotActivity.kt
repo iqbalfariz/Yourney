@@ -28,10 +28,11 @@ class ChatbotActivity : AppCompatActivity() {
 
         clickEvents()
 
+
     }
 
     private fun clickEvents() {
-        chatbotBinding.button2.setOnClickListener {
+        chatbotBinding.layoutSend.setOnClickListener {
             sendMessage()
         }
 

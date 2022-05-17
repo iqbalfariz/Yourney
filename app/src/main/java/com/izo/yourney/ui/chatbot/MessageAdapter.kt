@@ -1,6 +1,5 @@
 package com.izo.yourney.ui.chatbot
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,15 +11,15 @@ import com.izo.yourney.ui.chatbot.Constants.SEND_ID
 
 class MessageAdapter(): Adapter<ViewHolder>(){
 
-    val ITEM_USER = 1
-    val ITEM_BOT = 2
-    val messagesList = mutableListOf<Message>()
+    private val ITEM_USER = 1
+    private val ITEM_BOT = 2
+    private val messagesList = mutableListOf<Message>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         if (viewType == 1) {
             // inflate item user message
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_containet_user_message, parent, false)
+            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_container_user_message, parent, false)
             return UserViewHolder(view)
         } else {
             // inflate item bot message
@@ -52,10 +51,10 @@ class MessageAdapter(): Adapter<ViewHolder>(){
     override fun getItemViewType(position: Int): Int {
         val currentMessage = messagesList[position]
 
-        if (currentMessage.id == SEND_ID) {
-            return ITEM_USER
+        return if (currentMessage.id == SEND_ID) {
+            ITEM_USER
         } else {
-            return ITEM_BOT
+            ITEM_BOT
         }
     }
 

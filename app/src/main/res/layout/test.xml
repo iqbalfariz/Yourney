@@ -7,17 +7,14 @@
     android:background="@color/white"
     >
 
-    <Button
-        android:id="@+id/button"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:icon="@drawable/icon_google"
-        app:iconGravity="start"
-        app:iconSize="24dp"
-        app:iconTint="#FF5722"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add_circle"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
