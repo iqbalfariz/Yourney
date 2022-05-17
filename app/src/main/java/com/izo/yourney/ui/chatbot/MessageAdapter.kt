@@ -38,11 +38,13 @@ class MessageAdapter(): Adapter<ViewHolder>(){
 
             val viewHolder = holder as UserViewHolder
             holder.tvUserMessage.text = currentMessage.message
+            holder.tvTime.text = currentMessage.time
         } else {
             // untuk bot message
 
             val viewHolder = holder as BotViewHolder
             holder.tvBotMessage.text = currentMessage.message
+            holder.tvTime.text = currentMessage.time
         }
     }
 
@@ -65,10 +67,12 @@ class MessageAdapter(): Adapter<ViewHolder>(){
 
     class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val tvUserMessage = itemView.findViewById<TextView>(R.id.tv_user_message)
+        val tvTime = itemView.findViewById<TextView>(R.id.tv_time_user)
     }
 
     class BotViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val tvBotMessage = itemView.findViewById<TextView>(R.id.tv_bot_message)
+        val tvTime = itemView.findViewById<TextView>(R.id.tv_time_bot)
     }
 
 }

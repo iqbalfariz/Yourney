@@ -16,6 +16,7 @@ class ChatbotActivity : AppCompatActivity() {
 
     private lateinit var adapter: MessageAdapter
     private lateinit var chatbotBinding: ActivityChatbotBinding
+    private val timeStamp = Time.timeStamp()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +27,11 @@ class ChatbotActivity : AppCompatActivity() {
 
         recyclerView()
 
-        clickEvents()
-
+        clickItems()
 
     }
 
-    private fun clickEvents() {
+    private fun clickItems() {
         chatbotBinding.layoutSend.setOnClickListener {
             sendMessage()
         }
@@ -58,7 +58,7 @@ class ChatbotActivity : AppCompatActivity() {
         if (message.isNotEmpty()) {
             chatbotBinding.edMessage.setText("")
 
-            adapter.insertMessage(Message(message, SEND_ID))
+            adapter.insertMessage(Message(message, timeStamp,SEND_ID))
             chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
 
             botResponse(message)
@@ -73,7 +73,7 @@ class ChatbotActivity : AppCompatActivity() {
 
             withContext(Dispatchers.Main) {
                 val response = BotResponse.basicResponses(message)
-                adapter.insertMessage(Message(response, RECEIVE_ID))
+                adapter.insertMessage(Message(response, timeStamp, RECEIVE_ID))
                 chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
             }
         }
