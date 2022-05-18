@@ -1,5 +1,6 @@
 package com.izo.yourney.ui.persona
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.izo.yourney.R
@@ -28,6 +29,11 @@ class AboutTwoActivity : AppCompatActivity() {
 
         binding.tvPutus.setOnClickListener {
             binding.tvPutus.setBackgroundResource(R.drawable.circle_picker_bg)
+        }
+
+        binding.btnNext.setOnClickListener {
+            val intent = Intent(this, AboutThreeActivity::class.java)
+            startActivity(intent)
         }
 
     }

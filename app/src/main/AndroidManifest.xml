@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
-            android:name=".AboutThreeActivity"
-            android:exported="false" />
+            android:name=".ui.persona.AboutThreeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Yourney.NoActionBar"
+            />
         <activity
             android:name=".ui.persona.AboutTwoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Yourney.NoActionBar"
+            />
         <activity
             android:name=".ui.persona.AboutOneActivity"
             android:exported="false"

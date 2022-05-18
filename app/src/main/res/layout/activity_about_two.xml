@@ -39,26 +39,29 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
-        android:text="Selanjutnya"
+        android:text="@string/content_next"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        android:textColor="#F4F5FE"
+        android:textSize="16sp"
+        android:fontFamily="@font/linotte_bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tv_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:fontFamily="@font/linotte_regular"
-        android:text="Lewati"
+        android:text="@string/content_pass"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,11 +69,18 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="64dp"
-        android:text="Pilih Jenjang Pendidikanmu Saat Ini"
+        android:layout_marginEnd="45dp"
+        android:fontFamily="@font/linotte_bold"
+        android:text="@string/title_aboutTwo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_app" />
 
@@ -82,6 +92,9 @@
         android:background="@drawable/circle_not_pick_bg"
         android:gravity="center"
         android:text="SMA"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -91,9 +104,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/linotte_regular"
         android:text="SMA / SMK"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_sma"
+        app:layout_constraintStart_toStartOf="@+id/tv_sma"
         app:layout_constraintTop_toBottomOf="@+id/tv_sma" />
 
     <TextView
@@ -104,6 +121,9 @@
         android:background="@drawable/circle_not_pick_bg"
         android:gravity="center"
         android:text="Kuliah"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -113,9 +133,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/linotte_regular"
         android:text="Kuliah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_collage"
+        app:layout_constraintStart_toStartOf="@+id/tv_collage"
         app:layout_constraintTop_toBottomOf="@+id/tv_collage" />
 
     <TextView
@@ -126,18 +150,25 @@
         android:background="@drawable/circle_not_pick_bg"
         android:gravity="center"
         android:text="Lulus"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/linotte_regular"
         android:text="Lulus"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_lulus"
+        app:layout_constraintStart_toStartOf="@+id/tv_lulus"
         app:layout_constraintTop_toBottomOf="@+id/tv_lulus" />
 
     <TextView
@@ -148,39 +179,58 @@
         android:background="@drawable/circle_not_pick_bg"
         android:gravity="center"
         android:text="Putus"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/linotte_regular"
         android:text="Tidak lulus SMA/SMK"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_putus"
+        app:layout_constraintStart_toStartOf="@+id/tv_putus"
         app:layout_constraintTop_toBottomOf="@+id/tv_putus" />
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Masukkan nomor teleponmu"
+        android:text="@string/title_noTelp"
+        android:fontFamily="@font/linotte_bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
+        android:id="@+id/ed_phone_number"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/ed_about_bg"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:fontFamily="@font/linotte_regular"
+        android:hint="@string/content_edPhoneNumber"
+        android:inputType="text"
         android:minHeight="48dp"
-        android:hint="Masukan nomor"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />

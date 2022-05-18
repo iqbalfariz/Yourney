@@ -15,4 +15,17 @@
     <string name="content_checkbox">Saya setuju dengan Ketentuan Penggunaan dan Kebijakan Privasi Yourney</string>
     <string name="halo_naili">Halo, Naili</string>
     <string name="content_signUpIntro">Aku adalah <b> Ney </b> Smart Virtual assistant yang dapat menjadi temanmu dalam meraih masa depan yang kamu inginkan. Bantu aku untuk mengenalmu lebih dalam yuk!</string>
+    <string name="title_about_one">Dimana kamu tinggal ?</string>
+    <string name="content_edCity">Masukkan nama kota/kabupaten</string>
+    <string name="content_birthday">Masukkan tanggal lahirmu</string>
+    <string name="content_btnDatePicker">JAN 01 2020</string>
+    <string name="content_titleGender">Pilih jenis kelaminmu</string>
+    <string name="content_male">Laki - Laki</string>
+    <string name="content_female">Perempuan</string>
+    <string name="content_next">Selanjutnya</string>
+    <string name="content_start">Mulai</string>
+    <string name="content_pass">Lewati</string>
+    <string name="title_aboutTwo">Pilih jenjang pendidikanmu saat ini</string>
+    <string name="title_noTelp">Masukkan nomor teleponmu</string>
+    <string name="content_edPhoneNumber">Masukan nomor</string>
 </resources>

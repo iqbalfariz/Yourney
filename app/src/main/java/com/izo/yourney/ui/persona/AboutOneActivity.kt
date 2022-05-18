@@ -40,7 +40,7 @@ class AboutOneActivity : AppCompatActivity() {
             binding.tvFemale.setBackgroundResource(R.drawable.circle_picker_bg)
         }
 
-        binding.btnStart.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             val intent = Intent(this, AboutTwoActivity::class.java)
             startActivity(intent)
         }

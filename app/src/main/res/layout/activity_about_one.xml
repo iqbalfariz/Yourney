@@ -39,26 +39,30 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
-        android:text="Selanjutnya"
+        android:text="@string/content_next"
         android:textAllCaps="false"
+        android:textColor="#F4F5FE"
+        android:textSize="16sp"
+        android:fontFamily="@font/linotte_bold"
         app:cornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/tv_pass"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tv_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:fontFamily="@font/linotte_regular"
-        android:text="Lewati"
+        android:text="@string/content_pass"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,94 +70,143 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Dimana Kamu Tinggal ?"
+        android:text="@string/title_about_one"
+        android:fontFamily="@font/linotte_bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_app" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
+        android:id="@+id/ed_city"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:hint="Kota / kabupaten"
+        android:hint="@string/content_edCity"
+        android:background="@drawable/ed_about_bg"
+        android:fontFamily="@font/linotte_regular"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        android:textSize="13sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        android:text="Masukkan Tanggal Lahirmu"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/linotte_bold"
+        android:text="@string/content_birthday"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@id/ed_city" />
 
     <Button
         android:id="@+id/btn_date_picker"
         style="?android:spinnerStyle"
-        android:layout_width="250dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="JAN 01 2020"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/button_date_picker_bg"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:text="@string/content_btnDatePicker"
         android:textAlignment="center"
-        android:textColor="@color/blue_font_yourney"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
+        android:id="@+id/textView21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/linotte_bold"
+        android:text="@string/content_titleGender"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_date_picker" />
+
+    <TextView
         android:id="@+id/tv_male"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/circle_not_pick_bg"
         android:gravity="center"
         android:text="LK"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/btn_date_picker" />
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Laki - Laki"
-        app:layout_constraintBottom_toTopOf="@+id/btn_start"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical" />
+        android:layout_marginTop="8dp"
+        android:text="@string/content_male"
+        android:fontFamily="@font/linotte_regular"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_male"
+        app:layout_constraintStart_toStartOf="@+id/tv_male"
+        app:layout_constraintTop_toBottomOf="@+id/tv_male" />
 
     <TextView
         android:id="@+id/tv_female"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/circle_not_pick_bg"
+        android:fontFamily="@font/linotte_semi_bold"
         android:gravity="center"
         android:text="PR"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/btn_date_picker" />
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Perempuan"
-        app:layout_constraintBottom_toTopOf="@+id/btn_start"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/linotte_regular"
+        android:text="@string/content_female"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/tv_female"
+        app:layout_constraintStart_toStartOf="@+id/tv_female"
+        app:layout_constraintTop_toBottomOf="@+id/tv_female" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
