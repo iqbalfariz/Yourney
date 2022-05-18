@@ -14,8 +14,11 @@ import kotlin.coroutines.CoroutineContext
 
 class ChatbotActivity : AppCompatActivity() {
 
-    private lateinit var adapter: MessageAdapter
+    private lateinit var adapterMessage: MessageAdapter
+    private lateinit var adapterRecommend: RecommendAdapter
     private lateinit var chatbotBinding: ActivityChatbotBinding
+    private val list = ArrayList<String>()
+    private val timeStamp = Time.timeStamp()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +27,24 @@ class ChatbotActivity : AppCompatActivity() {
         supportActionBar?.title = "Chatbot"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        recyclerView()
+        // rv untuk chat
+        recyclerViewMessage()
 
-        clickEvents()
+        // rv untuk recommend
+        list.addAll(resources.getStringArray(R.array.data_recommend))
+        recyclerViewRecommend()
+
+        // jika item di click
+        clickItems()
+
+
 
     }
 
-    private fun clickEvents() {
-        chatbotBinding.button2.setOnClickListener {
+
+
+    private fun clickItems() {
+        chatbotBinding.layoutSend.setOnClickListener {
             sendMessage()
         }
 
@@ -39,16 +52,27 @@ class ChatbotActivity : AppCompatActivity() {
             GlobalScope.launch {
                 delay(1000)
                 withContext(Dispatchers.Main) {
-                    chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
+                    chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
                 }
             }
         }
     }
 
-    private fun recyclerView() {
-        adapter = MessageAdapter()
-        chatbotBinding.rvMessage.adapter = adapter
+    private fun recyclerViewMessage() {
+        adapterMessage = MessageAdapter()
+        chatbotBinding.rvMessage.adapter = adapterMessage
         chatbotBinding.rvMessage.layoutManager = LinearLayoutManager(applicationContext)
+    }
+
+    private fun recyclerViewRecommend() {
+        adapterRecommend = RecommendAdapter(list)
+        chatbotBinding.rvRecommend.adapter = adapterRecommend
+        chatbotBinding.rvRecommend.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        adapterRecommend.setOnItemClickCallback(object : RecommendAdapter.OnItemClickCallback{
+            override fun onItemClicked(dataRecommend: String) {
+                chatbotBinding.edMessage.setText(dataRecommend)
+            }
+        })
     }
 
     private fun sendMessage() {
@@ -57,8 +81,8 @@ class ChatbotActivity : AppCompatActivity() {
         if (message.isNotEmpty()) {
             chatbotBinding.edMessage.setText("")
 
-            adapter.insertMessage(Message(message, SEND_ID))
-            chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
+            adapterMessage.insertMessage(Message(message, timeStamp,SEND_ID))
+            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
 
             botResponse(message)
         }
@@ -72,8 +96,8 @@ class ChatbotActivity : AppCompatActivity() {
 
             withContext(Dispatchers.Main) {
                 val response = BotResponse.basicResponses(message)
-                adapter.insertMessage(Message(response, RECEIVE_ID))
-                chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
+                adapterMessage.insertMessage(Message(response, timeStamp, RECEIVE_ID))
+                chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
             }
         }
     }
@@ -84,7 +108,7 @@ class ChatbotActivity : AppCompatActivity() {
         GlobalScope.launch {
             delay(1000)
             withContext(Dispatchers.Main) {
-                chatbotBinding.rvMessage.scrollToPosition(adapter.itemCount - 1)
+                chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
             }
         }
     }
