@@ -207,6 +207,4 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_female" />
 
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
