@@ -28,6 +28,9 @@
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/message_chatbot_bg.xml" value="0.1145" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/message_user_bg.xml" value="0.1" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/onboarding_.xml" value="0.122" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/recommend_hobby_bg.xml" value="0.129" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/recommend_hobby_pick_bg.xml" value="0.1135" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/rectangle_background.xml" value="0.129" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_about_one.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_about_three.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_about_two.xml" value="0.264" />
@@ -44,6 +47,7 @@
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_third_screen.xml" value="0.32525951557093424" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_view_pager.xml" value="0.2265625" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/item_container_bot_message.xml" value="0.264" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/item_container_recommend_hobby.xml" value="0.6" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/item_container_recommend_message.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/item_container_user_message.xml" value="0.72" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/item_containet_user_message.xml" value="0.264" />

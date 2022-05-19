@@ -48,6 +48,8 @@
         android:text="Selanjutnya"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
+        android:textColor="#F4F5FE"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -68,11 +70,11 @@
         android:id="@+id/textView13"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:layout_marginStart="45dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="45dp"
-        android:text="@string/title_aboutThree"
         android:fontFamily="@font/linotte_bold"
+        android:text="@string/title_aboutThree"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -85,7 +87,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="45dp"
         android:background="@drawable/ed_about_bg"
         android:ems="10"
@@ -106,7 +108,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
         android:fontFamily="@font/linotte_bold"
         android:text="@string/title_hobby"
@@ -123,7 +125,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="45dp"
         android:background="@drawable/ed_about_bg"
         android:ems="10"
@@ -169,6 +171,48 @@
             android:textSize="14sp" />
 
     </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recommend_hobby"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_dont_have_hobby"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:text="Rekomendasi hobi dan ketertarikan"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/ed_hobby"
+        app:layout_constraintTop_toBottomOf="@+id/ed_hobby" />
+
+    <TextView
+        android:id="@+id/tv_dont_have_hobby"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="24dp"
+        android:text="Tidak memiliki hobi dan ketertarikan"
+        android:background="@drawable/recommend_hobby_bg"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_regular"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
