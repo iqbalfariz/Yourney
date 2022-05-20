@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginStart="25dp"

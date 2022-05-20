@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.izo.yourney.R
+import com.izo.yourney.ui.MainActivity
 import com.izo.yourney.ui.persona.PersonaActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         val btn = findViewById<Button>(R.id.btn_login)
 
         btn.setOnClickListener {
-            val intent = Intent(this, PersonaActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }

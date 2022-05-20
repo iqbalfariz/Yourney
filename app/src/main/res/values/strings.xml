@@ -34,6 +34,8 @@
     <string name="content_edHobby">Tulis hobimu</string>
     <string name="content_radio1">Belum Kepikiran</string>
     <string name="content_radio2">Masih belum yakin</string>
+    <string name="content_dialog">Terimakasih telah melengkapi profilmu. Aku akan menemani dan membimbingmu dalam meraih mimpi yang kamu inginkan.</string>
+    <string name="title_dialog">Pendaftaran Berhasil</string>
     <string-array name="recommend_hobby">
         <item>Menulis</item>
         <item>Membaca</item>

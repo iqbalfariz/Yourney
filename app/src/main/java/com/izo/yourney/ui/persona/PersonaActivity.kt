@@ -17,7 +17,7 @@ class PersonaActivity : AppCompatActivity() {
         binding = ActivityPersonaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnStart.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             val intent = Intent(this, AboutOneActivity::class.java)
             startActivity(intent)
         }
