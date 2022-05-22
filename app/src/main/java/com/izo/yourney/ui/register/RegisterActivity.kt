@@ -57,15 +57,14 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         auth = FirebaseAuth.getInstance()
 
         binding.btnRegis.setOnClickListener {
-            val email = binding..text.toString()
+            val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
             val username = binding.edUsername.text.toString()
 
