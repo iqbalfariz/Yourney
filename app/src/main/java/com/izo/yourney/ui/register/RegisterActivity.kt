@@ -70,28 +70,28 @@ class RegisterActivity : AppCompatActivity() {
 
             // validasi email
             if (email.isEmpty()){
-                binding.edEmail.error = "Email Harus Diisi"
+                binding.edEmail.error = "Email harus diisi"
                 binding.edEmail.requestFocus()
                 return@setOnClickListener
             }
 
             // validasi email tidak sesuai
             if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                binding.edEmail.error = "Email Tidak Valid"
+                binding.edEmail.error = "Email tidak valid"
                 binding.edEmail.requestFocus()
                 return@setOnClickListener
             }
 
             // validasi password
             if (password.isEmpty()){
-                binding.edPassword.error = "Password Harus Diisi"
+                binding.edPassword.error = "Password harus diisi"
                 binding.edPassword.requestFocus()
                 return@setOnClickListener
             }
 
             // validasi panjang password
-            if(password.length <= 6) {
-                binding.edPassword.error = "Password Minimal 6 Character"
+            if(password.length < 6) {
+                binding.edPassword.error = "Password minimal 6 karakter"
                 binding.edPassword.requestFocus()
                 return@setOnClickListener
             }
