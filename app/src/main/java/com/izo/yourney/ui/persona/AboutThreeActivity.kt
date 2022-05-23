@@ -66,6 +66,7 @@ class AboutThreeActivity : AppCompatActivity() {
         adapter.setOnItemClickCallback(object : RecommendHobbyAdapter.OnItemClickCallback{
             override fun onItemClicked(dataRecommend: String) {
                 binding.edHobby.setText(dataRecommend)
+
             }
         })
     }

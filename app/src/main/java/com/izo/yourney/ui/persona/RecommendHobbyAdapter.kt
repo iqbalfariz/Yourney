@@ -21,6 +21,7 @@ class RecommendHobbyAdapter(private val listRecommendHobby: ArrayList<String>): 
         holder.tvRecommendHobby.text = listRecommendHobby[position]
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listRecommendHobby[holder.adapterPosition])
+//            holder.tvRecommendHobby.setBackgroundResource(R.drawable.recommend_hobby_pick_bg)
         }
         recommendHobby = listRecommendHobby[position]
     }
@@ -31,6 +32,8 @@ class RecommendHobbyAdapter(private val listRecommendHobby: ArrayList<String>): 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
+
+
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvRecommendHobby = itemView.findViewById<TextView>(R.id.tv_recommend_hobby)

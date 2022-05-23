@@ -116,23 +116,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ed_city" />
 
-    <Button
-        android:id="@+id/btn_date_picker"
-        style="?android:spinnerStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
-        android:background="@drawable/button_date_picker_bg"
-        android:fontFamily="@font/linotte_semi_bold"
-        android:text="@string/content_btnDatePicker"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        android:background="@drawable/date_picker_bg"
+        android:calendarTextColor="@color/white"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@id/textView14" />
 
     <TextView
         android:id="@+id/textView21"
@@ -146,7 +143,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_date_picker" />
+        app:layout_constraintTop_toBottomOf="@id/datePicker" />
 
     <TextView
         android:id="@+id/tv_male"
