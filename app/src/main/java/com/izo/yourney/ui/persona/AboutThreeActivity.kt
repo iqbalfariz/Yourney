@@ -55,6 +55,7 @@ class AboutThreeActivity : AppCompatActivity() {
         btnOk.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         dialog.show()

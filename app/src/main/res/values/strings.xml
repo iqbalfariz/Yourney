@@ -36,6 +36,14 @@
     <string name="content_radio2">Masih belum yakin</string>
     <string name="content_dialog">Terimakasih telah melengkapi profilmu. Aku akan menemani dan membimbingmu dalam meraih mimpi yang kamu inginkan.</string>
     <string name="title_dialog">Pendaftaran Berhasil</string>
+    <string-array name="data_recommend">
+        <item>Kamu siapa?</item>
+        <item>Aku mau cerita</item>
+        <item>Tentang konseling</item>
+        <item>Mental health</item>
+        <item>Insecure</item>
+        <item>Anxiety</item>
+    </string-array>
     <string-array name="recommend_hobby">
         <item>Menulis</item>
         <item>Membaca</item>

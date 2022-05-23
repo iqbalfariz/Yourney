@@ -23,5 +23,6 @@ class PersonaActivity : AppCompatActivity() {
             finish()
         }
 
+
     }
 }
