@@ -15,12 +15,35 @@
     <string name="content_checkbox">Saya setuju dengan Ketentuan Penggunaan dan Kebijakan Privasi Yourney</string>
     <string name="halo_naili">Halo, Naili</string>
     <string name="content_signUpIntro">Aku adalah <b> Ney </b> Smart Virtual assistant yang dapat menjadi temanmu dalam meraih masa depan yang kamu inginkan. Bantu aku untuk mengenalmu lebih dalam yuk!</string>
-    <string-array name="data_recommend">
-        <item>Kamu siapa?</item>
-        <item>Aku mau cerita</item>
-        <item>Tentang konseling</item>
-        <item>Mental health</item>
-        <item>Insecure</item>
-        <item>Anxiety</item>
+    <string name="title_about_one">Dimana kamu tinggal ?</string>
+    <string name="content_edCity">Masukkan nama kota/kabupaten</string>
+    <string name="content_birthday">Masukkan tanggal lahirmu</string>
+    <string name="content_btnDatePicker">JAN 01 2020</string>
+    <string name="content_titleGender">Pilih jenis kelaminmu</string>
+    <string name="content_male">Laki - Laki</string>
+    <string name="content_female">Perempuan</string>
+    <string name="content_next">Selanjutnya</string>
+    <string name="content_start">Mulai</string>
+    <string name="content_pass">Lewati</string>
+    <string name="title_aboutTwo">Pilih jenjang pendidikanmu saat ini</string>
+    <string name="title_noTelp">Masukkan nomor teleponmu</string>
+    <string name="content_edPhoneNumber">Masukan nomor</string>
+    <string name="title_aboutThree">Mimpi apa yang ingin kamu raih dimasa depan ?</string>
+    <string name="content_edDream">Tulis mimpimu</string>
+    <string name="title_hobby">Masukkan hobi dan ketertarikanmu</string>
+    <string name="content_edHobby">Tulis hobimu</string>
+    <string name="content_radio1">Belum Kepikiran</string>
+    <string name="content_radio2">Masih belum yakin</string>
+    <string name="content_dialog">Terimakasih telah melengkapi profilmu. Aku akan menemani dan membimbingmu dalam meraih mimpi yang kamu inginkan.</string>
+    <string name="title_dialog">Pendaftaran Berhasil</string>
+    <string-array name="recommend_hobby">
+        <item>Menulis</item>
+        <item>Membaca</item>
+        <item>Dengar Musik</item>
+        <item>Bermain Game</item>
+        <item>Menggambar</item>
+        <item>Olahraga</item>
+        <item>Memasak</item>
+        <item>Memancing</item>
     </string-array>
 </resources>
