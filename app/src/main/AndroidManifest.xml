@@ -28,6 +28,9 @@
             android:exported="false"
             android:theme="@style/Theme.Yourney.NoActionBar" />
         <activity
+            android:name=".ui.chatbot.ChatbotActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.register.RegisterActivity"
             android:exported="false"
             android:theme="@style/Theme.Yourney.NoActionBar" />

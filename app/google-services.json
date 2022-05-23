@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "911094781711",
+    "firebase_url": "https://yourney-project-bangkit-22-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "yourney-project-bangkit-22",
+    "storage_bucket": "yourney-project-bangkit-22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911094781711:android:256db2df8a15bc7e0d907a",
+        "android_client_info": {
+          "package_name": "com.izo.yourney"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911094781711-j812d4vpidil7nvlv1v9i1uqv18eetgo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.izo.yourney",
+            "certificate_hash": "69a915e4b2ca5cf3cdf7b26f4586b6c42c430666"
+          }
+        },
+        {
+          "client_id": "911094781711-t54bnnkef8p9oqhvqrlsi3hiann9t201.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBreUPQOUfWoCB6s0mXOTrAX7aa4aVuBn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911094781711-t54bnnkef8p9oqhvqrlsi3hiann9t201.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.izo.yourney.R
+import com.izo.yourney.ui.chatbot.ChatbotActivity
 import com.izo.yourney.ui.register.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,9 +16,10 @@ class MainActivity : AppCompatActivity() {
         val btn = findViewById<Button>(R.id.btn_regis)
 
         btn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, ChatbotActivity::class.java)
             startActivity(intent)
 
         }
     }
+    // testing
 }

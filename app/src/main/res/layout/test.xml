@@ -7,14 +7,15 @@
     android:background="@color/white"
     >
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/circle_not_pick_bg"
-        android:text="Button"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add_circle"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
