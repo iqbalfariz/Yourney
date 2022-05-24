@@ -47,25 +47,25 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.edEmaill.text.toString()
             val password = binding.edPassword.text.toString()
 
-            //Validasi email
-            if (email.isEmpty()){
-                binding.edEmaill.error = "Email harus diisi"
-                binding.edEmaill.requestFocus()
-                return@setOnClickListener
-            }
-
-            //Validasi email tidak sesuai
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                binding.edPassword.error = "Email tidak valid"
-                binding.edPassword.requestFocus()
-                return@setOnClickListener
-            }
-
-            //Validasi password
-            if (password.isEmpty()){
-                binding.edPassword.error = "Password harus diisi"
-                binding.edPassword.requestFocus()
-                return@setOnClickListener
+            when {
+                // validasi email
+                !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                    binding.edEmaill.error = "Email tidak valid"
+                    binding.edEmaill.requestFocus()
+                    return@setOnClickListener
+                }
+                // validasi password
+                password.isEmpty() -> {
+                    binding.edPassword.error = "Password harus diisi"
+                    binding.edPassword.requestFocus()
+                    return@setOnClickListener
+                }
+                // validasi panjang password
+                password.length < 6 -> {
+                    binding.edPassword.error = "Password minimal 6 karakter"
+                    binding.edPassword.requestFocus()
+                    return@setOnClickListener
+                }
             }
 
             LoginFirebase(email,password)
