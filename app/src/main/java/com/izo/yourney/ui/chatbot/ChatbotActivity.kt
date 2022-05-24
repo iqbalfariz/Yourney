@@ -42,7 +42,6 @@ class ChatbotActivity : AppCompatActivity() {
     }
 
 
-
     private fun clickEvents() {
         chatbotBinding.layoutSend.setOnClickListener {
             val messageEditText = chatbotBinding.edMessage.text.toString()

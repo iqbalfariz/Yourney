@@ -89,26 +89,28 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
-        android:text="Mulai"
+        android:text="@string/content_start"
+        android:fontFamily="@font/linotte_bold"
+        android:textSize="16sp"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@id/tv_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tv_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:fontFamily="@font/linotte_regular"
-        android:text="Lewati"
+        android:text="@string/content_pass"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
