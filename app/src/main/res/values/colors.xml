@@ -13,4 +13,6 @@
     <color name="blue_font_yourney">#A0A1D0</color>
     <color name="blue_top_yourney">#A8C6FF</color>
     <color name="blue_facebook">#395185</color>
+    <color name="blue_notPick">#D5D8FF</color>
+    <color name="blue_pick">#9FA5FF</color>
 </resources>
