@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item>
-        <shape android:shape="oval">
-            <solid android:color="@color/blue_pick"/>
-            <size android:width="67dp" android:height="67dp"/>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue_notPick"/>
+            <corners android:radius="8dp"/>
         </shape>
     </item>
 
