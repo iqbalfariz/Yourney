@@ -35,7 +35,7 @@ class ChatbotActivity : AppCompatActivity() {
         recyclerViewRecommend()
 
         // jika item di click
-        clickItems()
+        clickEvents()
 
 
 
@@ -43,9 +43,10 @@ class ChatbotActivity : AppCompatActivity() {
 
 
 
-    private fun clickItems() {
+    private fun clickEvents() {
         chatbotBinding.layoutSend.setOnClickListener {
-            sendMessage()
+            val messageEditText = chatbotBinding.edMessage.text.toString()
+            sendMessage(messageEditText)
         }
 
         chatbotBinding.edMessage.setOnClickListener {
@@ -70,13 +71,13 @@ class ChatbotActivity : AppCompatActivity() {
         chatbotBinding.rvRecommend.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         adapterRecommend.setOnItemClickCallback(object : RecommendAdapter.OnItemClickCallback{
             override fun onItemClicked(dataRecommend: String) {
-                chatbotBinding.edMessage.setText(dataRecommend)
+                sendMessage(dataRecommend)
             }
         })
     }
 
-    private fun sendMessage() {
-        val message = chatbotBinding.edMessage.text.toString()
+    private fun sendMessage(message: String) {
+//        val message = chatbotBinding.edMessage.text.toString()
 
         if (message.isNotEmpty()) {
             chatbotBinding.edMessage.setText("")
