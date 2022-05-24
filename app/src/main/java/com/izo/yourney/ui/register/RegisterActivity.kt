@@ -67,38 +67,47 @@ class RegisterActivity : AppCompatActivity() {
         binding.btnRegis.setOnClickListener {
             val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
+            val confirmPassword = binding.edConfirmPassword.text.toString()
             val username = binding.edUsername.text.toString()
 
             // validasi email
             if (email.isEmpty()){
-                binding.edEmail.error = "Email Harus Diisi"
+                binding.edEmail.error = "Email harus diisi"
                 binding.edEmail.requestFocus()
                 return@setOnClickListener
             }
 
-            // validasi email tidak sesuai
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                binding.edEmail.error = "Email Tidak Valid"
-                binding.edEmail.requestFocus()
-                return@setOnClickListener
-            }
-
-            // validasi password
-            if (password.isEmpty()){
-                binding.edPassword.error = "Password Harus Diisi"
-                binding.edPassword.requestFocus()
-                return@setOnClickListener
-            }
-
-            // validasi panjang password
-            if(password.length <= 6) {
-                binding.edPassword.error = "Password Minimal 6 Character"
-                binding.edPassword.requestFocus()
-                return@setOnClickListener
+            when {
+                // validasi email
+                !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                    binding.edEmail.error = "Email tidak valid"
+                    binding.edEmail.requestFocus()
+                    return@setOnClickListener
+                }
+                // validasi password
+                password.isEmpty() -> {
+                    binding.edPassword.error = "Password harus diisi"
+                    binding.edPassword.requestFocus()
+                    return@setOnClickListener
+                }
+                // validasi panjang password
+                password.length < 6 -> {
+                    binding.edPassword.error = "Password minimal 6 karakter"
+                    binding.edPassword.requestFocus()
+                    return@setOnClickListener
+                }
+                // validasi kesamaan text password dan konfirmasi password
+                password != confirmPassword -> {
+                    binding.edConfirmPassword.error = "Password dan Konfirmasi Password tidak sama"
+                    binding.edConfirmPassword.requestFocus()
+                    return@setOnClickListener
+                }
             }
 
             RegisterFirebase(email, password)
         }
+
+
 
         binding.tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)

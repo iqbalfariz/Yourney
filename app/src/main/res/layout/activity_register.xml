@@ -101,6 +101,7 @@
                 android:id="@+id/ed_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:background="@drawable/coloumn_bg"
                 android:hint="Masukkan username anda"
                 android:textSize="12sp"
@@ -121,6 +122,7 @@
                 android:id="@+id/ed_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
                 android:hint="Masukkan email anda"
                 android:textSize="12sp"
                 android:textColor="@color/blue_font_yourney"
@@ -137,10 +139,11 @@
                 android:layout_marginTop="15dp"
                 />
 
-            <EditText
+            <com.izo.yourney.ui.customview.PasswordView
                 android:id="@+id/ed_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:hint="Masukkan password anda"
                 android:textSize="12sp"
                 android:textColor="@color/blue_font_yourney"
@@ -157,11 +160,12 @@
                 android:layout_marginTop="15dp"
                 />
 
-            <EditText
+            <com.izo.yourney.ui.customview.PasswordView
                 android:id="@+id/ed_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Konfirmasi password anda"
+                android:inputType="textPassword"
+                android:hint="Konfirmasi password Anda"
                 android:textSize="12sp"
                 android:textColor="@color/blue_font_yourney"
                 android:fontFamily="@font/linotte_regular"
