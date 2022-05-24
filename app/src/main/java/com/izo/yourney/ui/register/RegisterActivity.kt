@@ -13,7 +13,6 @@ package com.izo.yourney.ui.register
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
-//import android.widget.Toast
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -52,7 +51,6 @@ import com.izo.yourney.ui.persona.PersonaActivity
 
 // punya yusuf
 class RegisterActivity : AppCompatActivity() {
-
 
     lateinit var auth : FirebaseAuth
     lateinit var binding: ActivityRegisterBinding
@@ -106,8 +104,6 @@ class RegisterActivity : AppCompatActivity() {
 
             RegisterFirebase(email, password)
         }
-
-
 
         binding.tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)

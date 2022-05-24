@@ -147,7 +147,4 @@ class PasswordView : AppCompatEditText, View.OnTouchListener {
 
         return false
     }
-
-
-
 }
