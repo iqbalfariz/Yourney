@@ -35,15 +35,14 @@ class ChatbotActivity : AppCompatActivity() {
         recyclerViewRecommend()
 
         // jika item di click
-        clickItems()
+        clickEvents()
 
 
 
     }
 
 
-
-    private fun clickItems() {
+    private fun clickEvents() {
         chatbotBinding.layoutSend.setOnClickListener {
             sendMessage()
         }
