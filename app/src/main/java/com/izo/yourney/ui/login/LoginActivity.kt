@@ -44,14 +44,14 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            val email = binding.edEmaill.text.toString()
+            val email = binding.edEmail.text.toString()
             val password = binding.edPassword.text.toString()
 
             when {
                 // validasi email
                 !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
-                    binding.edEmaill.error = "Email tidak valid"
-                    binding.edEmaill.requestFocus()
+                    binding.edEmail.error = "Email tidak valid"
+                    binding.edEmail.requestFocus()
                     return@setOnClickListener
                 }
                 // validasi password

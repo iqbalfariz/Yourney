@@ -104,7 +104,7 @@
             app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <EditText
-            android:id="@+id/ed_emaill"
+            android:id="@+id/ed_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
@@ -134,7 +134,7 @@
             android:textColor="@color/blue_font_yourney"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ed_emaill" />
+            app:layout_constraintTop_toBottomOf="@id/ed_email" />
 
         <com.izo.yourney.ui.customview.PasswordView
             android:id="@+id/ed_password"
