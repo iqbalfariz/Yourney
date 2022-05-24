@@ -52,6 +52,7 @@ class AboutOneActivity() : AppCompatActivity() {
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, AboutTwoActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
