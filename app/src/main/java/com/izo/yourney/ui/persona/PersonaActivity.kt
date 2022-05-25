@@ -22,5 +22,14 @@ class PersonaActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.tvUsername.text = intent.getStringExtra(USERNAME)
+
     }
+
+    companion object {
+
+        const val USERNAME = "username"
+
+    }
+
 }

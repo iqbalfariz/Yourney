@@ -64,7 +64,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
 
-            RegisterFirebase(email, password)
+            RegisterFirebase(email, password, username)
         }
 
 
@@ -77,12 +77,13 @@ class RegisterActivity : AppCompatActivity() {
 
     }
 
-    private fun RegisterFirebase(email: String, password: String) {
+    private fun RegisterFirebase(email: String, password: String, username: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Register Berhasil", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, PersonaActivity::class.java)
+                    intent.putExtra(PersonaActivity.USERNAME, username)
                     startActivity(intent)
                     finish()
                 } else {
