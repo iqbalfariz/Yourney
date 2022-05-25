@@ -9,9 +9,11 @@ import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityAboutThreeBinding
+import com.izo.yourney.ui.MainActivity
 import com.izo.yourney.ui.login.LoginActivity
 
 class AboutThreeActivity : AppCompatActivity() {
+
 
     private lateinit var adapter: RecommendHobbyAdapter
     private lateinit var binding: ActivityAboutThreeBinding
@@ -53,6 +55,7 @@ class AboutThreeActivity : AppCompatActivity() {
         btnOk.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         dialog.show()
