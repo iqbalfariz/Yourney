@@ -43,28 +43,28 @@
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="20dp"
         android:text="Selanjutnya"
         android:textAllCaps="false"
-        app:cornerRadius="8dp"
         android:textColor="#F4F5FE"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dont_have_hobby" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/linotte_regular"
         android:text="Lewati"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_next" />
 
     <TextView
         android:id="@+id/textView13"
@@ -175,12 +175,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_recommend_hobby"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="120dp"
         android:layout_marginStart="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_dont_have_hobby"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -201,18 +199,18 @@
         android:id="@+id/tv_dont_have_hobby"
         android:layout_width="0dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="24dp"
-        android:text="Tidak memiliki hobi dan ketertarikan"
-        android:background="@drawable/recommend_hobby_bg"
-        android:gravity="center"
-        android:fontFamily="@font/linotte_regular"
-        android:textSize="14sp"
-        android:textColor="@color/black"
         android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="45dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        android:background="@drawable/recommend_hobby_bg"
+        android:fontFamily="@font/linotte_regular"
+        android:gravity="center"
+        android:text="Tidak memiliki hobi dan ketertarikan"
+        android:textColor="@color/black"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_recommend_hobby" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
