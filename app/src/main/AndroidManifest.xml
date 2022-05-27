@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
+            android:name=".IntroCounselingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CounselingActivity"
+            android:exported="false" />
+        <activity
             android:name=".GoogleSignInActivity"
             android:exported="false" />
         <activity

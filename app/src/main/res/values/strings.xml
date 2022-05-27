@@ -37,6 +37,14 @@
     <string name="content_radio2">Masih belum yakin</string>
     <string name="content_dialog">Terimakasih telah melengkapi profilmu. Aku akan menemani dan membimbingmu dalam meraih mimpi yang kamu inginkan.</string>
     <string name="title_dialog">Pendaftaran Berhasil</string>
+    <string name="tentang_konsultasi">Tentang Konsultasi</string>
+    <string name="about_counseling">Konseling merupakan kegiatan yang berguna untuk membantu mu untuk meraih masa depanmu. Kamu akan dibantu oleh seorang konselor untuk menyelesaikan permasalahan dan membantu kebutuhan mu.</string>
+    <string name="tentang_konselor">Tentang Konselor</string>
+    <string name="about_conselor_content">Konselor merupakan seseorang yang akan membantumu dalam menyelesaikan permasalahan yang sedang kamu alami. konselor tidak akan memberikanmu nasihat tentang bagaimana cara untuk menyelesaikan permasalahanmu, melainkan akan mengarahkan dan membimbingmu untuk menyelesaikan permasalahan tersebut. konselor akan mengajakmu berdiskusi supaya kamu dapat menyelesaikan permasalahan tersebut.</string>
+    <string name="alur_konsultasi">Alur Konsultasi</string>
+    <string name="content_plot_one">Pilih topik dan paket konseling yang kamu inginkan</string>
+    <string name="content_plot_two">Setelah pembayaran selesai, kamu dan konselor dapat menyesuaikan jadwal untuk melakukan konseling</string>
+    <string name="content_plot_three">Diskusikan permasalahan yang kamu alami bersama konselor dengan nyaman</string>
     <string-array name="data_recommend">
         <item>Kamu siapa?</item>
         <item>Aku mau cerita</item>
