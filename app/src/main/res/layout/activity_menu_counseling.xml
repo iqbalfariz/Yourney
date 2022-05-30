@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.counseling.menu.MenuCounselingActivity">
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:text="Pilih topik konsultasi"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gl_topic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:rowCount="3"
+        app:columnCount="2"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+        <TextView
+            android:id="@+id/tv_topic_1"
+            android:layout_height="38dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/shape_not_pick_bg"
+            android:text="Pendidikan"
+            android:gravity="center"
+            android:fontFamily="@font/linotte_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_marginEnd="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_topic_2"
+            android:layout_height="38dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/shape_not_pick_bg"
+            android:text="Pekerjaan"
+            android:gravity="center"
+            android:fontFamily="@font/linotte_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_topic_3"
+            android:layout_height="38dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/shape_not_pick_bg"
+            android:text="Pertemanan"
+            android:gravity="center"
+            android:fontFamily="@font/linotte_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_topic_4"
+            android:layout_height="38dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/shape_not_pick_bg"
+            android:text="Komunikasi"
+            android:gravity="center"
+            android:fontFamily="@font/linotte_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_topic_5"
+            android:layout_height="38dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/shape_not_pick_bg"
+            android:text="Minat Bakat"
+            android:gravity="center"
+            android:fontFamily="@font/linotte_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_topic_6"
+            android:layout_height="38dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/shape_not_pick_bg"
+            android:text="Keluarga"
+            android:gravity="center"
+            android:fontFamily="@font/linotte_regular"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Pilih paket konsultasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gl_topic" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_packet_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/shape_pick_bg"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paket Tenang"
+                    android:fontFamily="@font/linotte_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lakukan konsultasi maksimal 3x pertemuan"
+                    android:fontFamily="@font/linotte_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/circle_5dp"
+                    android:drawablePadding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Konsultasi menggunakan video call"
+                    android:fontFamily="@font/linotte_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/circle_5dp"
+                    android:drawablePadding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Setiap pertemuan maksimal 60 menit"
+                    android:fontFamily="@font/linotte_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/circle_5dp"
+                    android:drawablePadding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp100.000"
+                    android:fontFamily="@font/linotte_regular"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_pick_bg"
+                    android:layout_marginTop="5dp"
+                    />
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_packet_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_packet_one">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_pick_bg"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paket Tenang"
+                android:fontFamily="@font/linotte_bold"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lakukan konsultasi sampai kamu merasa nyaman"
+                android:fontFamily="@font/linotte_regular"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/circle_5dp"
+                android:drawablePadding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Konsultasi menggunakan video call"
+                android:fontFamily="@font/linotte_regular"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/circle_5dp"
+                android:drawablePadding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setiap pertemuan maksimal 60 menit"
+                android:fontFamily="@font/linotte_regular"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/circle_5dp"
+                android:drawablePadding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp300.000"
+                android:fontFamily="@font/linotte_regular"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_pick_bg"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/linotte_semi_bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:text="Vouchers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_packet_two" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/about_counseling_bg">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_discount_ticket" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/linotte_bold"
+                android:text="3 Voucher Tersedia"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/linotte_regular"
+                android:text="Berlaku sampai 20 Agustus 2021"
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView34"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_chevron_right" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/linotte_regular"
+                android:text="voucher"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/linotte_bold"
+        android:text="Selanjutnya"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
