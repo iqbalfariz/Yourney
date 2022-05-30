@@ -24,8 +24,7 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginStart="15dp"
-            android:layout_gravity="center_vertical"
-            app:srcCompat="@drawable/ic_google" />
+            android:layout_gravity="center_vertical"/>
 
         <TextView
             android:id="@+id/textView25"
