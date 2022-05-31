@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/drawable/button_shape.xml" value="0.1" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/drawable/button_shape2.xml" value="0.1" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_launch_screen.xml" value="0.18" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.122" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/about_counseling_bg.xml" value="0.1125" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/drawable/about_counselor_bg.xml" value="0.1125" />
