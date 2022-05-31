@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCounselingActivity"
+            android:exported="false" />
+        <activity
             android:name=".IntroCounselingActivity"
             android:exported="false" />
         <activity
