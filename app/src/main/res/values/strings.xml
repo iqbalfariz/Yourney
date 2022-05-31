@@ -63,4 +63,7 @@
         <item>Memasak</item>
         <item>Memancing</item>
     </string-array>
+    <string name="title_dialog_payment">TRANSAKSI BERHASIL</string>
+    <string name="content_dialog_payment">Terimakasih telah memilih layanan konsultasi yang tersedia. Kamu dapat memulai konsultasi sekarang juga dengan menekan tombol ok di bawah ini.</string>
+    <string name="content_voucher">Gunakan Voucher yang kamu miliki untuk mendapatkan potongan harga konseling</string>
 </resources>

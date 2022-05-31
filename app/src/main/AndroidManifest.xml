@@ -10,19 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
-            android:name=".PaymentActivity"
+            android:name=".ui.counseling.payment.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuCounselingActivity"
+            android:name=".ui.counseling.menu.MenuCounselingActivity"
             android:exported="false" />
         <activity
-            android:name=".IntroCounselingActivity"
+            android:name=".ui.counseling.intro.IntroCounselingActivity"
             android:exported="false" />
         <activity
-            android:name=".CounselingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GoogleSignInActivity"
+            android:name=".ui.counseling.CounselingActivity"
             android:exported="false" />
         <activity
             android:name=".ui.persona.AboutThreeActivity"
