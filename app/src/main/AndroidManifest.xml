@@ -11,6 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
+            android:name=".ui.launchscreen.LaunchScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".ui.persona.AboutThreeActivity"
             android:exported="false"
             android:theme="@style/Theme.Yourney.NoActionBar" />
@@ -39,13 +52,9 @@
             android:theme="@style/Theme.Yourney.NoActionBar" />
         <activity
             android:name=".ui.onboarding.OnBoardingActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="false" />
