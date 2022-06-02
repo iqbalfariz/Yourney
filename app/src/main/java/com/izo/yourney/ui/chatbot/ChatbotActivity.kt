@@ -7,7 +7,7 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityChatbotBinding
-import com.izo.yourney.ui.chatbot.Constants.RECEIVE_ID
+import com.izo  .yourney.ui.chatbot.Constants.RECEIVE_ID
 import com.izo.yourney.ui.chatbot.Constants.SEND_ID
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
