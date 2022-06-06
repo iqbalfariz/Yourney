@@ -186,7 +186,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ed_confirm_password" />
 
         <Button
-            android:id="@+id/btn_regis"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginStart="19dp"
@@ -214,7 +214,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_regis" />
+            app:layout_constraintTop_toBottomOf="@id/btn_register" />
 
         <TextView
             android:id="@+id/tv_login"
@@ -228,7 +228,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@id/btn_regis" />
+            app:layout_constraintTop_toBottomOf="@id/btn_register" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
