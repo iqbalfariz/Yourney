@@ -40,14 +40,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var hobby : EditText
     private lateinit var subRegist4 : Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         // login
         val btn = findViewById<Button>(R.id.btn_regis)
 
-        btn.setOnClickListener {
+        btnChatbot.setOnClickListener {
             val intent = Intent(this, ChatbotActivity::class.java)
             startActivity(intent)
         }
@@ -113,6 +115,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             email.error = "Email is empty"
             return
         }
+
 
         if (textPass.isEmpty()) {
             pasword.error = "Password is empty"
