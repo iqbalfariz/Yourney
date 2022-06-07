@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
+            android:name=".ui.launchscreen.LaunchScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.counseling.payment.PaymentActivity"
             android:exported="false" />
         <activity
