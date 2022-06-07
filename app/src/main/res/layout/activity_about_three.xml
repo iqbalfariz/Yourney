@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_next4"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginStart="25dp"
@@ -87,7 +87,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="45dp"
         android:background="@drawable/ed_about_bg"
         android:ems="10"
@@ -100,6 +100,7 @@
         android:textColorHint="@color/black"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -207,7 +208,10 @@
         android:gravity="center"
         android:text="Tidak memiliki hobi dan ketertarikan"
         android:textColor="@color/black"
-        android:textSize="14sp"
+
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_recommend_hobby" />
