@@ -206,13 +206,14 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="85dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/linotte_regular"
             android:text="Sudah punya akun ?"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_register" />
 
@@ -220,15 +221,17 @@
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/linotte_bold"
             android:text="Masuk disini"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@id/btn_register" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

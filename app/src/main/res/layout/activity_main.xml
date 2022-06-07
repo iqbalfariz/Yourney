@@ -7,15 +7,24 @@
     tools:context=".ui.MainActivity">
 
 
-
     <Button
-        android:id="@+id/btn_regis"
+        android:id="@+id/btn_chatbot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go Chatbot"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_counseling"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_counseling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Go Counseling"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
