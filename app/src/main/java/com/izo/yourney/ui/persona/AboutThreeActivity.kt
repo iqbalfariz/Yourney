@@ -43,7 +43,7 @@ class AboutThreeActivity : AppCompatActivity() {
             binding.edHobby.setText(binding.tvDontHaveHobby.text)
         }
 
-        binding.btnNext4.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             dream = binding.edDream.text.toString()
             hobby = binding.edHobby.text.toString()
             val bundle = intent.extras
@@ -69,7 +69,6 @@ class AboutThreeActivity : AppCompatActivity() {
 
             if (usersId != null){
                 ref.child(usersId).setValue(inputUser).addOnCompleteListener{
-                    Toast.makeText(applicationContext,"Data Berhasil ditambahkan", Toast.LENGTH_SHORT).show()
 //                    showDialog()
                     val intentToLogin = Intent(this, LoginActivity::class.java)
                     startActivity(intentToLogin)

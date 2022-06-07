@@ -123,7 +123,6 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener() {
                 if (it.isSuccessful) {
-                    Toast.makeText(this, "Register Berhasil", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this, PersonaActivity::class.java)
                     val bundle = Bundle()

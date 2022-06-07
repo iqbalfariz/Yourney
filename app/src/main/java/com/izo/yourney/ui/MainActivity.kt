@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         val btnChatbot = findViewById<Button>(R.id.btn_chatbot)
         btnChatbot.setOnClickListener {
             val intent = Intent(this, ChatbotActivity::class.java)
@@ -30,9 +29,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, IntroCounselingActivity::class.java)
             startActivity(intent)
         }
-
-
     }
-
-
 }

@@ -33,10 +33,4 @@ class PersonaActivity : AppCompatActivity() {
 
     }
 
-    companion object {
-
-//        const val USERNAME = "username"
-
-    }
-
 }

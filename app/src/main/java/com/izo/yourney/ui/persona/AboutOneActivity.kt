@@ -37,13 +37,11 @@ class AboutOneActivity() : AppCompatActivity() {
         binding.bornDate.init(current.get(Calendar.YEAR), current.get(Calendar.MONTH), current.get(Calendar.DAY_OF_MONTH)){
                 view, year, month, day ->
             val month = month
-            Toast.makeText(this, "Tanggal yang dipilih : $day/$month/$year", Toast.LENGTH_SHORT).show()
             born = "$day/$month/$year"
         }
 
         binding.tvMale.setOnClickListener {
             gender = "pria"
-            Toast.makeText(applicationContext,gender, Toast.LENGTH_SHORT).show()
 
             binding.tvMale.setBackgroundResource(R.drawable.circle_picker_bg)
             binding.tvFemale.setBackgroundResource(R.drawable.circle_not_pick_bg)
@@ -51,13 +49,12 @@ class AboutOneActivity() : AppCompatActivity() {
 
         binding.tvFemale.setOnClickListener {
             gender = "wanita"
-            Toast.makeText(applicationContext,gender, Toast.LENGTH_SHORT).show()
 
             binding.tvFemale.setBackgroundResource(R.drawable.circle_picker_bg)
             binding.tvMale.setBackgroundResource(R.drawable.circle_not_pick_bg)
         }
 
-        binding.btnNext2.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             city = binding.edCity.text.toString()
 
             val bundle = intent.extras
