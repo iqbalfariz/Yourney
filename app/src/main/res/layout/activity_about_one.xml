@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@id/ed_city" />
 
     <DatePicker
-        android:id="@+id/datePicker"
+        android:id="@+id/born_date"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginStart="45dp"
@@ -131,7 +131,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/datePicker" />
+        app:layout_constraintTop_toBottomOf="@id/born_date" />
 
     <TextView
         android:id="@+id/tv_male"

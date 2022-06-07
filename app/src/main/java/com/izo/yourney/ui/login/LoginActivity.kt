@@ -6,36 +6,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
-import android.widget.Button
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import android.widget.Button
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityLoginBinding
 import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.chatbot.ChatbotActivity
 import com.izo.yourney.ui.persona.PersonaActivity
 import com.izo.yourney.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_login)
-////        supportActionBar?.hide()
-//
-//        val btn = findViewById<Button>(R.id.btn_login)
-//
-//        btn.setOnClickListener {
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
-
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var binding : ActivityLoginBinding
     private lateinit var auth : FirebaseAuth
@@ -50,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
 
         binding.tvRegis.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+
             startActivity(intent)
-            finish()
         }
 
         binding.btnLogin.setOnClickListener {
