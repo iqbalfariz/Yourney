@@ -21,7 +21,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setUpView()
         val handler = Handler()
         handler.postDelayed({
-            startActivity(Intent(applicationContext, LaunchScreenActivity::class.java))
+            startActivity(Intent(applicationContext, OnBoardingActivity::class.java))
             finish()
         }, 3000L) //3000 L = 3 detik
     }
