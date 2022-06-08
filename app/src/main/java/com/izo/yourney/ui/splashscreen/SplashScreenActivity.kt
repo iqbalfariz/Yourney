@@ -10,6 +10,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.R
 import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
 import com.izo.yourney.ui.onboarding.OnBoardingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setUpView()
         val handler = Handler()
         handler.postDelayed({
-            startActivity(Intent(applicationContext, OnBoardingActivity::class.java))
+            startActivity(Intent(applicationContext, LaunchScreenActivity::class.java))
             finish()
         }, 3000L) //3000 L = 3 detik
     }

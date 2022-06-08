@@ -57,7 +57,7 @@ class AboutOneActivity() : AppCompatActivity() {
             binding.tvMale.setBackgroundResource(R.drawable.circle_not_pick_bg)
         }
 
-        binding.btnNext2.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             city = binding.edCity.text.toString()
 
             val bundle = intent.extras

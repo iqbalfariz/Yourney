@@ -43,7 +43,14 @@ class AboutThreeActivity : AppCompatActivity() {
             binding.edHobby.setText(binding.tvDontHaveHobby.text)
         }
 
-        binding.btnNext4.setOnClickListener {
+        binding.radioDream.setOnCheckedChangeListener { radioGroup, id ->
+                when (id) {
+                    R.id.radio1 -> binding.edDream.setText(binding.radio1.text)
+                    R.id.radio2 -> binding.edDream.setText(binding.radio2.text)
+                }
+        }
+
+        binding.btnNext.setOnClickListener {
             dream = binding.edDream.text.toString()
             hobby = binding.edHobby.text.toString()
             val bundle = intent.extras
@@ -70,19 +77,16 @@ class AboutThreeActivity : AppCompatActivity() {
             if (usersId != null){
                 ref.child(usersId).setValue(inputUser).addOnCompleteListener{
                     Toast.makeText(applicationContext,"Data Berhasil ditambahkan", Toast.LENGTH_SHORT).show()
-//                    showDialog()
-                    val intentToLogin = Intent(this, LoginActivity::class.java)
-                    startActivity(intentToLogin)
-                    finish()
+                    showDialog()
+
                 }
             } else {
                 Toast.makeText(applicationContext,"Data ada yang belum terisi", Toast.LENGTH_SHORT).show()
             }
-//            startActivity(intent)
-//            finish()
 
         }
     }
+
 
     private fun showDialog() {
 
@@ -95,14 +99,13 @@ class AboutThreeActivity : AppCompatActivity() {
         val btnOk = dialog.findViewById<Button>(R.id.btn_ok)
 
         btnOk.setOnClickListener {
-
             val intent = Intent(this, LoginActivity::class.java)
-//            intent.putExtras()
             startActivity(intent)
             finish()
+            dialog.dismiss()
         }
 
-//        dialog.show()
+        dialog.show()
 
     }
 

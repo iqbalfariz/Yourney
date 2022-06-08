@@ -50,7 +50,7 @@ class AboutTwoActivity : AppCompatActivity() {
             binding.tvSma.setBackgroundResource(R.drawable.circle_not_pick_bg)
         }
 
-        binding.btnNext3.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             phoneNumber = binding.edPhoneNumber.text.toString()
 
             val bundle = intent.extras

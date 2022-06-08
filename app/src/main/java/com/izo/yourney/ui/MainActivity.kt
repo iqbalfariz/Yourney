@@ -9,6 +9,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.izo.yourney.R
 import com.izo.yourney.ui.chatbot.ChatbotActivity
 import com.izo.yourney.ui.counseling.CounselingActivity
+import com.izo.yourney.ui.counseling.intro.IntroCounselingActivity
 import com.izo.yourney.ui.customview.PasswordView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -58,42 +59,42 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnCounseling = findViewById<Button>(R.id.btn_counseling)
         btnCounseling.setOnClickListener {
-            val intent = Intent(this, CounselingActivity::class.java)
+            val intent = Intent(this, IntroCounselingActivity::class.java)
             startActivity(intent)
         }
 
-        // regist
-        name = findViewById(R.id.ed_username)
-        email = findViewById(R.id.ed_email)
-        pasword = findViewById(R.id.ed_password)
-        confirmPass = findViewById(R.id.ed_confirm_password)
-        subRegits1 = findViewById(R.id.btn_regis)
-
-        subRegits1.setOnClickListener(this)
-
-        city = findViewById(R.id.ed_city)
-        bornDate = findViewById(R.id.born_date)
-        genderMale = findViewById(R.id.tv_male)
-        genderFemale = findViewById(R.id.tv_female)
-        subRegist2 = findViewById(R.id.btn_next2)
-
-        subRegist2.setOnClickListener(this)
-
-        studySMA = findViewById(R.id.tv_sma)
-        studyKuliah = findViewById(R.id.tv_collage)
-        studyLulus = findViewById(R.id.tv_lulus)
-        studyTdkLulus = findViewById(R.id.tv_putus)
-        phoneNumber = findViewById(R.id.ed_phone_number)
-        subRegist3 = findViewById(R.id.btn_next3)
-
-        subRegist3.setOnClickListener(this)
-
-        dream  = findViewById(R.id.ed_dream)
-        dreamTemp = findViewById(R.id.radio_dream)
-        hobby = findViewById(R.id.ed_hobby)
-        subRegist4 = findViewById(R.id.btn_next4)
-
-        subRegist4.setOnClickListener(this)
+//        // regist
+//        name = findViewById(R.id.ed_username)
+//        email = findViewById(R.id.ed_email)
+//        pasword = findViewById(R.id.ed_password)
+//        confirmPass = findViewById(R.id.ed_confirm_password)
+//        subRegits1 = findViewById(R.id.btn_regis)
+//
+//        subRegits1.setOnClickListener(this)
+//
+//        city = findViewById(R.id.ed_city)
+//        bornDate = findViewById(R.id.born_date)
+//        genderMale = findViewById(R.id.tv_male)
+//        genderFemale = findViewById(R.id.tv_female)
+//        subRegist2 = findViewById(R.id.btn_next)
+//
+//        subRegist2.setOnClickListener(this)
+//
+//        studySMA = findViewById(R.id.tv_sma)
+//        studyKuliah = findViewById(R.id.tv_collage)
+//        studyLulus = findViewById(R.id.tv_lulus)
+//        studyTdkLulus = findViewById(R.id.tv_putus)
+//        phoneNumber = findViewById(R.id.ed_phone_number)
+//        subRegist3 = findViewById(R.id.btn_next)
+//
+//        subRegist3.setOnClickListener(this)
+//
+//        dream  = findViewById(R.id.ed_dream)
+//        dreamTemp = findViewById(R.id.radio_dream)
+//        hobby = findViewById(R.id.ed_hobby)
+//        subRegist4 = findViewById(R.id.btn_next)
+//
+//        subRegist4.setOnClickListener(this)
 
 //        val gender = ""
 //
