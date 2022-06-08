@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.Window
 import android.widget.Button
 import android.widget.TextView
@@ -20,6 +21,8 @@ class PaymentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = "Pembayaran"
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // click events
         clickEvents()
@@ -51,8 +54,16 @@ class PaymentActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
+            dialog.dismiss()
         }
 
         dialog.show()
     }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if (item.itemId == android.R.id.home) {
+//            onBackPressed()
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 }

@@ -22,6 +22,7 @@ class IntroCounselingActivity : AppCompatActivity() {
         binding.btnStart.setOnClickListener {
             val intentToMenu = Intent(this, MenuCounselingActivity::class.java)
             startActivity(intentToMenu)
+            finish()
         }
 
     }

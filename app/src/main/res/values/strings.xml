@@ -66,4 +66,6 @@
     <string name="title_dialog_payment">TRANSAKSI BERHASIL</string>
     <string name="content_dialog_payment">Terimakasih telah memilih layanan konsultasi yang tersedia. Kamu dapat memulai konsultasi sekarang juga dengan menekan tombol ok di bawah ini.</string>
     <string name="content_voucher">Gunakan Voucher yang kamu miliki untuk mendapatkan potongan harga konseling</string>
+    <string name="price_packet_one">Rp100.000</string>
+    <string name="price_packet_two">Rp300.000</string>
 </resources>
