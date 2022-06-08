@@ -3,13 +3,19 @@ package com.izo.yourney.ui.chatbot
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
+import com.izo.yourney.data.AnswerResponse
+import com.izo.yourney.data.remote.ApiConfig
 import com.izo.yourney.databinding.ActivityChatbotBinding
 import com.izo.yourney.ui.chatbot.Constants.RECEIVE_ID
 import com.izo.yourney.ui.chatbot.Constants.SEND_ID
 import kotlinx.coroutines.*
+import retrofit2.Call
+import retrofit2.Response
+import javax.security.auth.callback.Callback
 import kotlin.coroutines.CoroutineContext
 
 class ChatbotActivity : AppCompatActivity() {
@@ -95,9 +101,26 @@ class ChatbotActivity : AppCompatActivity() {
             delay(1000)
 
             withContext(Dispatchers.Main) {
-                val response = BotResponse.basicResponses(message)
-                adapterMessage.insertMessage(Message(response, timeStamp, RECEIVE_ID))
-                chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
+                val client = ApiConfig.getApiService().postMessage(message)
+                client.enqueue(object : retrofit2.Callback<AnswerResponse> {
+                    override fun onResponse(
+                        call: Call<AnswerResponse>,
+                        response: Response<AnswerResponse>
+                    ) {
+                        val responseBody = response.body()
+                        if (response.isSuccessful && responseBody != null) {
+                            adapterMessage.insertMessage(Message(responseBody.answer, timeStamp, RECEIVE_ID))
+                            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount-1)
+                        } else {
+                            Log.e("ChatbotActivity", "onFailure: ${response.message()}")
+                        }
+                    }
+
+                    override fun onFailure(call: Call<AnswerResponse>, t: Throwable) {
+                        Log.e("ChatbotActivity", "onFailure: ${t.message}")
+                    }
+
+                })
             }
         }
     }
