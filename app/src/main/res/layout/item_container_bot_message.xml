@@ -8,16 +8,18 @@
 
     <TextView
         android:id="@+id/tv_bot_message"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/message_chatbot_bg"
+        android:fontFamily="@font/linotte_semi_bold"
         android:padding="8dp"
         android:text="example message bot"
         android:textColor="@color/white"
         android:textSize="14sp"
-        android:fontFamily="@font/linotte_semi_bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time_bot"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,21 +27,19 @@
         android:id="@+id/imageView5"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_bot_message"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/tv_time_bot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/linotte_regular"
         android:text="14.25"
         android:textSize="9sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_bot_message" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

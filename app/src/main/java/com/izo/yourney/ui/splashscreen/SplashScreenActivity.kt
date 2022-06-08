@@ -10,6 +10,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.R
 import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
 import com.izo.yourney.ui.onboarding.OnBoardingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
