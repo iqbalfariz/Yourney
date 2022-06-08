@@ -1,16 +1,22 @@
 package com.izo.yourney.ui.chatbot
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityChatbotBinding
-import com.izo  .yourney.ui.chatbot.Constants.RECEIVE_ID
+import com.izo.yourney.ui.chatbot.Constants.RECEIVE_ID
 import com.izo.yourney.ui.chatbot.Constants.SEND_ID
 import kotlinx.coroutines.*
-import kotlin.coroutines.CoroutineContext
+//ini coba api nlp
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.FormBody
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody
+import okhttp3.Response
 
 class ChatbotActivity : AppCompatActivity() {
 
@@ -19,6 +25,11 @@ class ChatbotActivity : AppCompatActivity() {
     private lateinit var chatbotBinding: ActivityChatbotBinding
     private val list = ArrayList<String>()
     private val timeStamp = Time.timeStamp()
+
+    //ini coba api nlp
+    private var url: String? = "https://bismillahapi-lslrhnaybq-uc.a.run.app/" //****Put your  URL here******
+    private val POST = "POST"
+    private val GET = "GET"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,8 +86,9 @@ class ChatbotActivity : AppCompatActivity() {
         })
     }
 
+    // untuk kirim pesan
     private fun sendMessage(message: String) {
-//        val message = chatbotBinding.edMessage.text.toString()
+        val message = chatbotBinding.edMessage.text.toString()
 
         if (message.isNotEmpty()) {
             chatbotBinding.edMessage.setText("")
@@ -89,6 +101,7 @@ class ChatbotActivity : AppCompatActivity() {
 
     }
 
+    // untuk respon pesannya
     private fun botResponse(message: String){
 
         GlobalScope.launch {
@@ -96,6 +109,7 @@ class ChatbotActivity : AppCompatActivity() {
 
             withContext(Dispatchers.Main) {
                 val response = BotResponse.basicResponses(message)
+//                val response = "url"
                 adapterMessage.insertMessage(Message(response, timeStamp, RECEIVE_ID))
                 chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
             }
