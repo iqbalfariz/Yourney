@@ -1,10 +1,9 @@
 package com.izo.yourney.ui.chatbot
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
 import com.izo.yourney.data.AnswerResponse
@@ -15,8 +14,6 @@ import com.izo.yourney.ui.chatbot.Constants.SEND_ID
 import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
-import kotlin.coroutines.CoroutineContext
 
 class ChatbotActivity : AppCompatActivity() {
 
@@ -110,7 +107,7 @@ class ChatbotActivity : AppCompatActivity() {
                         val responseBody = response.body()
                         if (response.isSuccessful && responseBody != null) {
                             adapterMessage.insertMessage(Message(responseBody.answer, timeStamp, RECEIVE_ID))
-                            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount-1)
+                            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
                         } else {
                             Log.e("ChatbotActivity", "onFailure: ${response.message()}")
                         }
