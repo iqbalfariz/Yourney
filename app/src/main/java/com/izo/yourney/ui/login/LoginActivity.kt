@@ -1,6 +1,7 @@
 package com.izo.yourney.ui.login
 
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,27 +9,30 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import android.widget.Button
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.preferencesDataStore
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
-import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityLoginBinding
 import com.izo.yourney.ui.MainActivity
-import com.izo.yourney.ui.chatbot.ChatbotActivity
-import com.izo.yourney.ui.persona.PersonaActivity
 import com.izo.yourney.ui.register.RegisterActivity
+import androidx.datastore.preferences.core.Preferences
+import androidx.lifecycle.ViewModelProvider
+import com.izo.yourney.data.local.StateModel
+import com.izo.yourney.data.local.StatePreference
+import com.izo.yourney.ui.ViewModelFactory
 
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class LoginActivity : AppCompatActivity() {
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var binding : ActivityLoginBinding
     private lateinit var auth : FirebaseAuth
+    private lateinit var loginViewModel: LoginViewModel
+    private lateinit var user: StateModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +41,20 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        setupViewModel()
+        clickEvents()
 
+    }
+
+    private fun setupViewModel() {
+        loginViewModel = ViewModelProvider(
+            this,
+            ViewModelFactory(StatePreference.getInstance(dataStore))
+        )[LoginViewModel::class.java]
+
+    }
+
+    private fun clickEvents() {
         binding.tvRegis.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
 
@@ -83,7 +100,6 @@ class LoginActivity : AppCompatActivity() {
         binding.cvGoogle.setOnClickListener {
             signIn()
         }
-
     }
 
     private fun signIn() {
@@ -137,6 +153,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
+                    loginViewModel.login()
                     Toast.makeText(this, "Selamat datang $email", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
