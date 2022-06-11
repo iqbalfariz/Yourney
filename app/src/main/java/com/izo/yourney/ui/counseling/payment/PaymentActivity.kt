@@ -4,14 +4,12 @@ import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityPaymentBinding
-import com.izo.yourney.ui.MainActivity
-import com.izo.yourney.ui.login.LoginActivity
+import com.izo.yourney.ui.main.MainActivity
 
 class PaymentActivity : AppCompatActivity() {
 

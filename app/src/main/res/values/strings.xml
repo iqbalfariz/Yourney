@@ -68,4 +68,6 @@
     <string name="content_voucher">Gunakan Voucher yang kamu miliki untuk mendapatkan potongan harga konseling</string>
     <string name="price_packet_one">Rp100.000</string>
     <string name="price_packet_two">Rp300.000</string>
+    <string name="alert_logout">Apakah kamu yakin akan logout ?</string>
+    <string name="content_alert_dialog">Data state login kamu akan terhapus, tapi email dan password kamu tetap aman kok :)</string>
 </resources>
