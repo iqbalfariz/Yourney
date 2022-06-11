@@ -15,11 +15,10 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.izo.yourney.R
 import com.izo.yourney.data.local.StatePreference
-import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.main.MainActivity
 import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
 import com.izo.yourney.ui.onboarding.OnBoardingActivity
-import com.izo.yourney.ui.onboarding.OnBoardingViewModel
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 

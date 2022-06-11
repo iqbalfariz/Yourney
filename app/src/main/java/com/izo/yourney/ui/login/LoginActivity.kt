@@ -18,7 +18,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.izo.yourney.databinding.ActivityLoginBinding
-import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.main.MainActivity
 import com.izo.yourney.ui.register.RegisterActivity
 import androidx.datastore.preferences.core.Preferences
 import androidx.lifecycle.ViewModelProvider

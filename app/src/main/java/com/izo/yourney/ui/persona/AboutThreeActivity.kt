@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.FirebaseDatabase
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityAboutThreeBinding
-import com.izo.yourney.ui.MainActivity
 import com.izo.yourney.ui.Users
 import com.izo.yourney.ui.login.LoginActivity
 

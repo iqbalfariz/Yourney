@@ -1,16 +1,30 @@
-package com.izo.yourney.ui
+package com.izo.yourney.ui.main
 
+import android.app.Dialog
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.widget.*
-import com.google.firebase.database.FirebaseDatabase
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import com.izo.yourney.R
+import com.izo.yourney.data.local.StatePreference
+import com.izo.yourney.databinding.ActivityMainBinding
+import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.chatbot.ChatbotActivity
-import com.izo.yourney.ui.counseling.CounselingActivity
 import com.izo.yourney.ui.counseling.intro.IntroCounselingActivity
 import com.izo.yourney.ui.customview.PasswordView
+import com.izo.yourney.ui.login.LoginActivity
+import com.izo.yourney.ui.onboarding.OnBoardingActivity
+import com.izo.yourney.ui.splashscreen.SplashScreenViewModel
+
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -42,66 +56,75 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var hobby : EditText
     private lateinit var subRegist4 : Button
 
+    private lateinit var mainViewModel: MainViewModel
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        setupViewModel()
+        clickEvents()
 
 
-        // login
-        val btn = findViewById<Button>(R.id.btn_regis)
+    }
 
-        val btnChatbot = findViewById<Button>(R.id.btn_chatbot)
-        btnChatbot.setOnClickListener {
-            val intent = Intent(this, ChatbotActivity::class.java)
-            startActivity(intent)
+    private fun setupViewModel() {
+        mainViewModel = ViewModelProvider(
+            this,
+            ViewModelFactory(StatePreference.getInstance(dataStore))
+        )[MainViewModel::class.java]
+    }
+
+    private fun clickEvents() {
+
+        // go to chatbot
+        binding.btnChatbot.setOnClickListener {
+            val intentToChatbot = Intent(this, ChatbotActivity::class.java)
+            startActivity(intentToChatbot)
         }
 
-        val btnCounseling = findViewById<Button>(R.id.btn_counseling)
-        btnCounseling.setOnClickListener {
-            val intent = Intent(this, IntroCounselingActivity::class.java)
-            startActivity(intent)
+        // go to counseling
+        binding.btnCounseling.setOnClickListener {
+            val intentToCounseling = Intent(this, IntroCounselingActivity::class.java)
+            startActivity(intentToCounseling)
         }
 
-//        // regist
-//        name = findViewById(R.id.ed_username)
-//        email = findViewById(R.id.ed_email)
-//        pasword = findViewById(R.id.ed_password)
-//        confirmPass = findViewById(R.id.ed_confirm_password)
-//        subRegits1 = findViewById(R.id.btn_regis)
-//
-//        subRegits1.setOnClickListener(this)
-//
-//        city = findViewById(R.id.ed_city)
-//        bornDate = findViewById(R.id.born_date)
-//        genderMale = findViewById(R.id.tv_male)
-//        genderFemale = findViewById(R.id.tv_female)
-//        subRegist2 = findViewById(R.id.btn_next)
-//
-//        subRegist2.setOnClickListener(this)
-//
-//        studySMA = findViewById(R.id.tv_sma)
-//        studyKuliah = findViewById(R.id.tv_collage)
-//        studyLulus = findViewById(R.id.tv_lulus)
-//        studyTdkLulus = findViewById(R.id.tv_putus)
-//        phoneNumber = findViewById(R.id.ed_phone_number)
-//        subRegist3 = findViewById(R.id.btn_next)
-//
-//        subRegist3.setOnClickListener(this)
-//
-//        dream  = findViewById(R.id.ed_dream)
-//        dreamTemp = findViewById(R.id.radio_dream)
-//        hobby = findViewById(R.id.ed_hobby)
-//        subRegist4 = findViewById(R.id.btn_next)
-//
-//        subRegist4.setOnClickListener(this)
+        // logout
+        binding.btnLogout.setOnClickListener {
+//            mainViewModel.logout()
+//            val intentLogout = Intent(this, OnBoardingActivity::class.java)
+//            startActivity(intentLogout)
+//            finish()
+            showDialog()
+        }
 
-//        val gender = ""
-//
-//        if (genderMale != null) {
-//            Toast.makeText(applicationContext,"Tombol laki dipencet", Toast.LENGTH_SHORT).show()
-//        }
+    }
 
+    private fun showDialog() {
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_dialog_logout)
+
+
+        val btnYes = dialog.findViewById<Button>(R.id.btn_yes)
+        val btnNo = dialog.findViewById<Button>(R.id.btn_no)
+
+        btnYes.setOnClickListener {
+            mainViewModel.logout()
+            val intentLogout = Intent(this, OnBoardingActivity::class.java)
+            startActivity(intentLogout)
+            finish()
+            dialog.dismiss()
+        }
+
+        btnNo.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 
     override fun onClick(v: View?) {
