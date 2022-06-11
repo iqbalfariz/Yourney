@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.WindowInsets
 import android.view.WindowManager
@@ -13,19 +12,26 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
-import androidx.core.view.size
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
-import com.bumptech.glide.Glide
 import com.izo.yourney.R
+import com.izo.yourney.data.local.StateModel
+import com.izo.yourney.data.local.StatePreference
 import com.izo.yourney.databinding.ActivityOnBoardingBinding
 
-import com.izo.yourney.ui.MainActivity
+import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
-import com.izo.yourney.ui.register.RegisterActivity
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class OnBoardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnBoardingBinding
+    private lateinit var onBoardingViewModel: OnBoardingViewModel
+    private lateinit var user: StateModel
 
     private val viewPagerAdapter = ViewPagerAdapter(
         listOf(
@@ -56,6 +62,8 @@ class OnBoardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupViewModel()
         setUpView()
 
 
@@ -80,6 +88,7 @@ class OnBoardingActivity : AppCompatActivity() {
             if (viewPager.currentItem + 1 < viewPagerAdapter.itemCount) {
                 viewPager.currentItem += 1
             } else {
+                onBoardingViewModel.enter()
                 val intentToMain = Intent(this, LaunchScreenActivity::class.java)
                 startActivity(intentToMain)
                 finish()
@@ -88,12 +97,20 @@ class OnBoardingActivity : AppCompatActivity() {
 
         // skip page
         binding.tvPass.setOnClickListener {
+            onBoardingViewModel.enter()
             val intentToMain = Intent(this, LaunchScreenActivity::class.java)
             startActivity(intentToMain)
             finish()
         }
 
 
+    }
+
+    private fun setupViewModel() {
+        onBoardingViewModel = ViewModelProvider(
+            this,
+            ViewModelFactory(StatePreference.getInstance(dataStore))
+        )[OnBoardingViewModel::class.java]
     }
 
     private fun setCurrentIndicator(index: Int) {
