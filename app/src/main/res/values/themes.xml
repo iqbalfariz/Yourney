@@ -18,5 +18,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    
+    <style name="InputLayout.OutlineBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorAccent">@color/purple_yourney</item>
+        <item name="boxStrokeColor">@color/purple_yourney</item>
+        <item name="hintTextColor">@color/blue_font_yourney</item>
+    </style>
 
 </resources>

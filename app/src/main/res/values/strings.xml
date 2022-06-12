@@ -46,9 +46,9 @@
     <string name="content_plot_two">Setelah pembayaran selesai, kamu dan konselor dapat menyesuaikan jadwal untuk melakukan konseling</string>
     <string name="content_plot_three">Diskusikan permasalahan yang kamu alami bersama konselor dengan nyaman</string>
     <string-array name="data_recommend">
-        <item>Kamu siapa?</item>
-        <item>Aku mau cerita</item>
-        <item>Tentang konseling</item>
+        <item>Who are you ?</item>
+        <item>Let's have a talk</item>
+        <item>About counseling</item>
         <item>Mental health</item>
         <item>Insecure</item>
         <item>Anxiety</item>
@@ -70,4 +70,5 @@
     <string name="price_packet_two">Rp300.000</string>
     <string name="alert_logout">Apakah kamu yakin akan logout ?</string>
     <string name="content_alert_dialog">Data state login kamu akan terhapus, tapi email dan password kamu tetap aman kok :)</string>
+    <string name="content_type_chatbot">Type a message</string>
 </resources>
