@@ -1,64 +1,19 @@
 package com.izo.yourney.ui.register
 
-//import android.content.Intent
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import android.util.Patterns
-//import android.widget.*
-//import com.google.firebase.auth.FirebaseAuth
-//import com.izo.yourney.databinding.ActivityRegisterBinding
-//import com.izo.yourney.ui.login.LoginActivity
-//import com.izo.yourney.ui.persona.PersonaActivity
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
-import android.view.View
-import android.widget.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
-import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityRegisterBinding
-import com.izo.yourney.ui.Users
-import com.izo.yourney.ui.chatbot.ChatbotActivity
-import com.izo.yourney.ui.customview.PasswordView
 import com.izo.yourney.ui.login.LoginActivity
 import com.izo.yourney.ui.persona.PersonaActivity
 
-
-//class RegisterActivity : AppCompatActivity() {
-//
-//
-//    lateinit var auth : FirebaseAuth
-//
-//    private lateinit var binding: ActivityRegisterBinding
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityRegisterBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//
-//        binding.btnRegis.setOnClickListener {
-//            val intent = Intent(this, PersonaActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//
-//        binding.tvLogin.setOnClickListener {
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
-//}
-
-
-// punya yusuf
 class RegisterActivity : AppCompatActivity() {
 
-    lateinit var auth : FirebaseAuth
+    lateinit var auth: FirebaseAuth
     lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,7 +30,7 @@ class RegisterActivity : AppCompatActivity() {
             val username = binding.edUsername.text.toString()
 
             // validasi email
-            if (email.isEmpty()){
+            if (email.isEmpty()) {
                 binding.edEmail.error = "Email harus diisi"
                 binding.edEmail.requestFocus()
                 return@setOnClickListener

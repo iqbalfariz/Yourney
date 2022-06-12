@@ -1,12 +1,10 @@
 package com.izo.yourney.ui.option
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.izo.yourney.R
+import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.databinding.ActivityOptionBinding
 import com.izo.yourney.ui.chatbot.ChatbotActivity
-import com.izo.yourney.ui.counseling.CounselingActivity
 import com.izo.yourney.ui.counseling.intro.IntroCounselingActivity
 
 class OptionActivity : AppCompatActivity() {

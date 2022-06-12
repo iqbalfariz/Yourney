@@ -3,13 +3,13 @@ package com.izo.yourney.ui.onboarding
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.datastore.core.DataStore
@@ -21,7 +21,6 @@ import com.izo.yourney.R
 import com.izo.yourney.data.local.StateModel
 import com.izo.yourney.data.local.StatePreference
 import com.izo.yourney.databinding.ActivityOnBoardingBinding
-
 import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
 
@@ -31,7 +30,6 @@ class OnBoardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnBoardingBinding
     private lateinit var onBoardingViewModel: OnBoardingViewModel
-    private lateinit var user: StateModel
 
     private val viewPagerAdapter = ViewPagerAdapter(
         listOf(

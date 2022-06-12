@@ -1,7 +1,6 @@
 package com.izo.yourney.ui.customview
 
 import android.content.Context
-import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.text.Editable
 import android.text.TextWatcher
@@ -20,7 +19,7 @@ class PasswordView : AppCompatEditText, View.OnTouchListener {
     private lateinit var hidePasswordImage: Drawable
     private lateinit var lockImage: Drawable
     private var eyeShow = false
-    private var eyeHide = false
+
 
     constructor(context: Context) : super(context) {
         init()
@@ -38,10 +37,6 @@ class PasswordView : AppCompatEditText, View.OnTouchListener {
         init()
     }
 
-//    override fun onDraw(canvas: Canvas) {
-//        super.onDraw(canvas)
-//        hint = "Masukkan password Anda"
-//    }
 
     private fun init() {
         showPasswordImage = ContextCompat.getDrawable(context, R.drawable.ic_eye) as Drawable
@@ -53,9 +48,11 @@ class PasswordView : AppCompatEditText, View.OnTouchListener {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
                 // Do nothing.
             }
+
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (s.toString().isNotEmpty()) showPasswordButton() else hideEyeButton()
             }
+
             override fun afterTextChanged(s: Editable) {
                 // Do nothing.
             }
@@ -114,12 +111,14 @@ class PasswordView : AppCompatEditText, View.OnTouchListener {
             if (isShowButtonClicked) {
                 return when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
-                        showPasswordImage = ContextCompat.getDrawable(context, R.drawable.ic_eye) as Drawable
+                        showPasswordImage =
+                            ContextCompat.getDrawable(context, R.drawable.ic_eye) as Drawable
                         showPasswordButton()
                         true
                     }
                     MotionEvent.ACTION_UP -> {
-                        showPasswordImage = ContextCompat.getDrawable(context, R.drawable.ic_eye) as Drawable
+                        showPasswordImage =
+                            ContextCompat.getDrawable(context, R.drawable.ic_eye) as Drawable
                         transformationMethod = HideReturnsTransformationMethod.getInstance()
                         hidePasswordButton()
                         true
@@ -129,12 +128,14 @@ class PasswordView : AppCompatEditText, View.OnTouchListener {
             } else {
                 return when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
-                        hidePasswordImage = ContextCompat.getDrawable(context, R.drawable.ic_hide_eye) as Drawable
+                        hidePasswordImage =
+                            ContextCompat.getDrawable(context, R.drawable.ic_hide_eye) as Drawable
                         hidePasswordButton()
                         true
                     }
                     MotionEvent.ACTION_UP -> {
-                        hidePasswordImage = ContextCompat.getDrawable(context, R.drawable.ic_hide_eye) as Drawable
+                        hidePasswordImage =
+                            ContextCompat.getDrawable(context, R.drawable.ic_hide_eye) as Drawable
                         transformationMethod = PasswordTransformationMethod.getInstance()
                         showPasswordButton()
                         true

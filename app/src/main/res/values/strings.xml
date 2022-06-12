@@ -77,7 +77,7 @@
     <string name="Potensi">Recognize your potential</string>
 
     <!-- floating action button-->
-    <string name="fab">NEED CONSULTATION</string>
+    <string name="fab">NEED \nCONSULTATION</string>
     <string name="fab2">NEED CONFIDE</string>
     <string name="fab3">WHAT CAN I DO \nTO HELP YOU?</string>
     <string name="custom1">SEND!</string>
@@ -94,8 +94,8 @@
     <string name="pil7">I had fight with my parents</string>
     <string name="pil8">I really wasted my time</string>
 
-    <string name="title_dialog_daily">Terkirim</string>
-    <string name="content_dialog_daily">Terima kasih, Syakillah. Kamu telah mengisi Perasaan dan keluh kesah yang kamu alami hari ini. Apabila kamu sedang mengalami kesulitan, kamu dapat berbincang dengan Aku, Ney Smart Virtual Assistant.</string>
+    <string name="title_dialog_daily">Sent</string>
+    <string name="content_dialog_daily">Thank you for filling the feelings and complaints that you experience today. If you\'re having trouble, you can talk to Me, Ney Smart Virtual Assistant.</string>
 
 
 </resources>

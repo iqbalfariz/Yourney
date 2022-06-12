@@ -7,13 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.izo.yourney.R
 
-class RecommendHobbyAdapter(private val listRecommendHobby: ArrayList<String>): RecyclerView.Adapter<RecommendHobbyAdapter.ListViewHolder>() {
+class RecommendHobbyAdapter(private val listRecommendHobby: ArrayList<String>) :
+    RecyclerView.Adapter<RecommendHobbyAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
     private lateinit var recommendHobby: String
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_container_recommend_hobby, parent, false)
+        val view: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_container_recommend_hobby, parent, false)
         return ListViewHolder(view)
     }
 
@@ -21,7 +23,6 @@ class RecommendHobbyAdapter(private val listRecommendHobby: ArrayList<String>): 
         holder.tvRecommendHobby.text = listRecommendHobby[position]
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listRecommendHobby[holder.adapterPosition])
-//            holder.tvRecommendHobby.setBackgroundResource(R.drawable.recommend_hobby_pick_bg)
         }
         recommendHobby = listRecommendHobby[position]
     }
@@ -32,7 +33,6 @@ class RecommendHobbyAdapter(private val listRecommendHobby: ArrayList<String>): 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
-
 
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

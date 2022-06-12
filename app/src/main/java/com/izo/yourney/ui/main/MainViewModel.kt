@@ -8,7 +8,7 @@ import com.izo.yourney.data.local.StateModel
 import com.izo.yourney.data.local.StatePreference
 import kotlinx.coroutines.launch
 
-class MainViewModel (val pref: StatePreference) : ViewModel() {
+class MainViewModel(val pref: StatePreference) : ViewModel() {
 
     // hapus state login dan enter
     fun logout() {
@@ -21,7 +21,6 @@ class MainViewModel (val pref: StatePreference) : ViewModel() {
     fun getState(): LiveData<StateModel> {
         return pref.getState().asLiveData()
     }
-
 
 
 }

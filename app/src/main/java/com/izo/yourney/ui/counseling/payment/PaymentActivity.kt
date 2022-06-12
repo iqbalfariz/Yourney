@@ -2,11 +2,11 @@ package com.izo.yourney.ui.counseling.payment
 
 import android.app.Dialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityPaymentBinding
 import com.izo.yourney.ui.main.MainActivity
@@ -20,9 +20,7 @@ class PaymentActivity : AppCompatActivity() {
         binding = ActivityPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Pembayaran"
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // click events
         clickEvents()
     }
 
@@ -58,10 +56,4 @@ class PaymentActivity : AppCompatActivity() {
         dialog.show()
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if (item.itemId == android.R.id.home) {
-//            onBackPressed()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
 }

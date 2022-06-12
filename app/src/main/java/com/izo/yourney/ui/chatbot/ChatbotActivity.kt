@@ -2,7 +2,6 @@ package com.izo.yourney.ui.chatbot
 
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
@@ -28,7 +27,6 @@ class ChatbotActivity : AppCompatActivity() {
         chatbotBinding = ActivityChatbotBinding.inflate(layoutInflater)
         setContentView(chatbotBinding.root)
         supportActionBar?.title = "Chatbot"
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // rv untuk chat
         recyclerViewMessage()
@@ -39,7 +37,6 @@ class ChatbotActivity : AppCompatActivity() {
 
         // jika item di click
         clickEvents()
-
 
 
     }
@@ -70,8 +67,9 @@ class ChatbotActivity : AppCompatActivity() {
     private fun recyclerViewRecommend() {
         adapterRecommend = RecommendAdapter(list)
         chatbotBinding.rvRecommend.adapter = adapterRecommend
-        chatbotBinding.rvRecommend.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        adapterRecommend.setOnItemClickCallback(object : RecommendAdapter.OnItemClickCallback{
+        chatbotBinding.rvRecommend.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        adapterRecommend.setOnItemClickCallback(object : RecommendAdapter.OnItemClickCallback {
             override fun onItemClicked(dataRecommend: String) {
                 sendMessage(dataRecommend)
             }
@@ -79,20 +77,19 @@ class ChatbotActivity : AppCompatActivity() {
     }
 
     private fun sendMessage(message: String) {
-//        val message = chatbotBinding.edMessage.text.toString()
 
         if (message.isNotEmpty()) {
             chatbotBinding.edMessage.setText("")
 
-            adapterMessage.insertMessage(Message(message, timeStamp,SEND_ID))
-            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount -1)
+            adapterMessage.insertMessage(Message(message, timeStamp, SEND_ID))
+            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
 
             botResponse(message)
         }
 
     }
 
-    private fun botResponse(message: String){
+    private fun botResponse(message: String) {
 
         GlobalScope.launch {
             delay(1000)
@@ -106,7 +103,13 @@ class ChatbotActivity : AppCompatActivity() {
                     ) {
                         val responseBody = response.body()
                         if (response.isSuccessful && responseBody != null) {
-                            adapterMessage.insertMessage(Message(responseBody.answer, timeStamp, RECEIVE_ID))
+                            adapterMessage.insertMessage(
+                                Message(
+                                    responseBody.answer,
+                                    timeStamp,
+                                    RECEIVE_ID
+                                )
+                            )
                             chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
                         } else {
                             Log.e("ChatbotActivity", "onFailure: ${response.message()}")
@@ -133,10 +136,4 @@ class ChatbotActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if (item.itemId == android.R.id.home) {
-//            onBackPressed()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
 }

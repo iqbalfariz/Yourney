@@ -1,13 +1,9 @@
 package com.izo.yourney.ui.persona
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.core.os.bundleOf
-import com.izo.yourney.R
+import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.databinding.ActivityPersonaBinding
-import com.izo.yourney.ui.login.LoginActivity
 
 class PersonaActivity : AppCompatActivity() {
 

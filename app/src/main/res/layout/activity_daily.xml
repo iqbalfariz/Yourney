@@ -46,9 +46,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/linotte_bold"
-        android:text="Bagaimana perasaanmu hari ini?"
+        android:text="How are you today ?"
         android:textColor="@color/blue_font_yourney"
         android:textSize="20dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

@@ -1,9 +1,9 @@
 package com.izo.yourney.ui.persona
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityAboutTwoBinding
 

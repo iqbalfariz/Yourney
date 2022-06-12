@@ -15,18 +15,17 @@
         android:src="@drawable/ic_yourney_logo" />
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image1"
-        android:width="300dp"
-        android:text="Sign In"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:width="300dp"
         android:background="@drawable/button_shape"
+        android:text="Login"
         android:textColor="@color/white"
-        android:textSize="17dp"
-        android:id="@+id/btn_login"
-        />
+        android:textSize="17dp" />
 
     <Button
         android:id="@+id/btn_regis"
@@ -37,7 +36,7 @@
         android:layout_marginTop="10dp"
         android:width="300dp"
         android:backgroundTint="@color/bitwhite"
-        android:text="Sign Up"
+        android:text="Create New Account"
         android:textColor="@color/blue_top_yourney"
         android:textSize="17dp"
         app:cornerRadius="25dp" />

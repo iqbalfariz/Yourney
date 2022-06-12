@@ -177,7 +177,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="19dp"
             android:fontFamily="@font/linotte_bold"
-            android:text="Masuk"
+            android:text="Login"
             android:textAllCaps="false"
             android:textSize="16sp"
             app:cornerRadius="8dp"

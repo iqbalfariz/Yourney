@@ -15,5 +15,4 @@ class LoginViewModel(private val pref: StatePreference) : ViewModel() {
     }
 
 
-
 }

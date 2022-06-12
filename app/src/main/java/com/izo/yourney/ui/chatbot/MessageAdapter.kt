@@ -5,11 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.*
+import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.izo.yourney.R
 import com.izo.yourney.ui.chatbot.Constants.SEND_ID
 
-class MessageAdapter(): Adapter<ViewHolder>(){
+class MessageAdapter() : Adapter<ViewHolder>() {
 
     private val ITEM_USER = 1
     private val ITEM_BOT = 2
@@ -19,11 +20,13 @@ class MessageAdapter(): Adapter<ViewHolder>(){
 
         if (viewType == 1) {
             // inflate item user message
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_container_user_message, parent, false)
+            val view: View = LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_container_user_message, parent, false)
             return UserViewHolder(view)
         } else {
             // inflate item bot message
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_container_bot_message, parent, false)
+            val view: View = LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_container_bot_message, parent, false)
             return BotViewHolder(view)
         }
 
@@ -65,12 +68,12 @@ class MessageAdapter(): Adapter<ViewHolder>(){
         notifyItemInserted(messagesList.size)
     }
 
-    class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvUserMessage = itemView.findViewById<TextView>(R.id.tv_user_message)
         val tvTime = itemView.findViewById<TextView>(R.id.tv_time_user)
     }
 
-    class BotViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class BotViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvBotMessage = itemView.findViewById<TextView>(R.id.tv_bot_message)
         val tvTime = itemView.findViewById<TextView>(R.id.tv_time_bot)
     }

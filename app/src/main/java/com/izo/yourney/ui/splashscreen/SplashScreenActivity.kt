@@ -15,9 +15,9 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.izo.yourney.R
 import com.izo.yourney.data.local.StatePreference
-import com.izo.yourney.ui.main.MainActivity
 import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
+import com.izo.yourney.ui.main.MainActivity
 import com.izo.yourney.ui.onboarding.OnBoardingActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -35,7 +35,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setUpView()
         val handler = Handler()
         handler.postDelayed({
-            splashScreenViewModel.getState().observe(this) {state ->
+            splashScreenViewModel.getState().observe(this) { state ->
                 if (state.isEnter && state.isLogin) {
                     startActivity(Intent(applicationContext, MainActivity::class.java))
                     finish()
@@ -46,13 +46,7 @@ class SplashScreenActivity : AppCompatActivity() {
                     startActivity(Intent(applicationContext, OnBoardingActivity::class.java))
                     finish()
                 }
-//                if (state.isLogin) {
-//                    startActivity(Intent(applicationContext, MainActivity::class.java))
-//                    finish()
-//                } else {
-//                    startActivity(Intent(applicationContext, OnBoardingActivity::class.java))
-//                    finish()
-//                }
+
             }
         }, 3000L) //3000 L = 3 detik
     }
@@ -65,15 +59,15 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun setUpView() {
-            @Suppress("DEPRECATION")
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                window.insetsController?.hide(WindowInsets.Type.statusBars())
-            } else {
-                window.setFlags(
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN
-                )
-            }
-            supportActionBar?.hide()
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
     }
 }

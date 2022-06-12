@@ -3,12 +3,12 @@ package com.izo.yourney.ui.persona
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Window
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -21,7 +21,6 @@ import com.izo.yourney.databinding.ActivityAboutThreeBinding
 import com.izo.yourney.ui.Users
 import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.login.LoginActivity
-import com.izo.yourney.ui.onboarding.OnBoardingViewModel
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -64,10 +63,10 @@ class AboutThreeActivity : AppCompatActivity() {
         }
 
         binding.radioDream.setOnCheckedChangeListener { radioGroup, id ->
-                when (id) {
-                    R.id.radio1 -> binding.edDream.setText(binding.radio1.text)
-                    R.id.radio2 -> binding.edDream.setText(binding.radio2.text)
-                }
+            when (id) {
+                R.id.radio1 -> binding.edDream.setText(binding.radio1.text)
+                R.id.radio2 -> binding.edDream.setText(binding.radio2.text)
+            }
         }
 
         binding.btnNext.setOnClickListener {
@@ -93,17 +92,34 @@ class AboutThreeActivity : AppCompatActivity() {
             val born = bundle?.getString("born")
             val gender = bundle?.getString("gender")
 
-            val inputUser = Users(usersId, username, email, password, city, born, gender, study, phone, dream, hobby)
+            val inputUser = Users(
+                usersId,
+                username,
+                email,
+                password,
+                city,
+                born,
+                gender,
+                study,
+                phone,
+                dream,
+                hobby
+            )
 
-            if (usersId != null){
-                ref.child(usersId).setValue(inputUser).addOnCompleteListener{
+            if (usersId != null) {
+                ref.child(usersId).setValue(inputUser).addOnCompleteListener {
                     aboutThreeViewModel.saveUsername(username)
-                    Toast.makeText(applicationContext,"Data Berhasil ditambahkan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        applicationContext,
+                        "Data Berhasil ditambahkan",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     showDialog()
 
                 }
             } else {
-                Toast.makeText(applicationContext,"Data ada yang belum terisi", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Data ada yang belum terisi", Toast.LENGTH_SHORT)
+                    .show()
             }
 
         }
@@ -135,7 +151,7 @@ class AboutThreeActivity : AppCompatActivity() {
         adapter = RecommendHobbyAdapter(list)
         binding.rvRecommendHobby.adapter = adapter
         binding.rvRecommendHobby.layoutManager = GridLayoutManager(this, 2)
-        adapter.setOnItemClickCallback(object : RecommendHobbyAdapter.OnItemClickCallback{
+        adapter.setOnItemClickCallback(object : RecommendHobbyAdapter.OnItemClickCallback {
             override fun onItemClicked(dataRecommend: String) {
                 binding.edHobby.setText(dataRecommend)
 

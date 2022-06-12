@@ -6,7 +6,7 @@ import com.izo.yourney.data.local.StatePreference
 import kotlinx.coroutines.launch
 
 
-class OnBoardingViewModel (private val pref: StatePreference) : ViewModel() {
+class OnBoardingViewModel(private val pref: StatePreference) : ViewModel() {
 
     // simpan data enter
     fun enter() {

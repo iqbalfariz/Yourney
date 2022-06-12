@@ -1,9 +1,8 @@
 package com.izo.yourney.ui.launchscreen
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.izo.yourney.R
+import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.databinding.ActivityLaunchScreenBinding
 import com.izo.yourney.ui.login.LoginActivity
 import com.izo.yourney.ui.register.RegisterActivity

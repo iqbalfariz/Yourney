@@ -7,13 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.izo.yourney.R
 
-class RecommendAdapter(private val listRecommend: ArrayList<String>): RecyclerView.Adapter<RecommendAdapter.ListViewHolder>() {
+class RecommendAdapter(private val listRecommend: ArrayList<String>) :
+    RecyclerView.Adapter<RecommendAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
     private lateinit var recommendMessage: String
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_container_recommend_message, parent, false)
+        val view: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_container_recommend_message, parent, false)
         return ListViewHolder(view)
     }
 

@@ -3,7 +3,6 @@ package com.izo.yourney.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.izo.yourney.data.local.StatePreference
-import com.izo.yourney.ui.fragments.HomeViewModel
 import com.izo.yourney.ui.login.LoginViewModel
 import com.izo.yourney.ui.main.MainViewModel
 import com.izo.yourney.ui.onboarding.OnBoardingViewModel
@@ -29,9 +28,6 @@ class ViewModelFactory(private val pref: StatePreference) : ViewModelProvider.Ne
             }
             modelClass.isAssignableFrom(AboutThreeViewModel::class.java) -> {
                 AboutThreeViewModel(pref) as T
-            }
-            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
-                HomeViewModel(pref) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

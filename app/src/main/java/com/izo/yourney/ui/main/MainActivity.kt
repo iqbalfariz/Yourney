@@ -3,7 +3,6 @@ package com.izo.yourney.ui.main
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -18,12 +17,12 @@ import com.izo.yourney.ui.option.OptionActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: com.izo.yourney.databinding.ActivityMainBinding
 
-    private lateinit var bottomNavView : BottomNavigationView
+    private lateinit var bottomNavView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,12 +73,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             this,
             ViewModelFactory(StatePreference.getInstance(dataStore))
         )[MainViewModel::class.java]
-
     }
 
-
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
-    }
 
 }

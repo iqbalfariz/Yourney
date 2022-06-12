@@ -1,9 +1,8 @@
 package com.izo.yourney.ui.counseling.menu
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.izo.yourney.R
 import com.izo.yourney.databinding.ActivityMenuCounselingBinding
 import com.izo.yourney.ui.counseling.payment.PaymentActivity
@@ -17,7 +16,6 @@ class MenuCounselingActivity : AppCompatActivity() {
         binding = ActivityMenuCounselingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Menu Konsultasi"
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         clickEvents()
 
@@ -108,10 +106,4 @@ class MenuCounselingActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if (item.itemId == android.R.id.home) {
-//            onBackPressed()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
 }
