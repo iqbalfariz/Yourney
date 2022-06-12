@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yourney">
         <activity
-            android:name=".DailyActivity"
+            android:name=".ui.option.OptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dailycheckin.DailyActivity"
             android:exported="false" />
         <activity
             android:name=".ui.launchscreen.LaunchScreenActivity"
@@ -65,7 +68,7 @@
             android:theme="@style/Theme.Yourney.NoActionBar" />
         <activity
             android:name=".ui.onboarding.OnBoardingActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="false" />

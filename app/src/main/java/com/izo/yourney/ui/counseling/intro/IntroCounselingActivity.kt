@@ -17,7 +17,7 @@ class IntroCounselingActivity : AppCompatActivity() {
         binding = ActivityIntroCounselingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Konsultasi"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.btnStart.setOnClickListener {
             val intentToMenu = Intent(this, MenuCounselingActivity::class.java)
@@ -27,10 +27,10 @@ class IntroCounselingActivity : AppCompatActivity() {
 
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressed()
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if (item.itemId == android.R.id.home) {
+//            onBackPressed()
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 }

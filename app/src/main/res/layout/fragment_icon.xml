@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.IconFragment">
+    tools:context=".ui.fragments.IconFragment"
+    android:background="@color/white"
+    >
 
     <ImageView
         android:id="@+id/fab_pict"
@@ -26,7 +28,7 @@
         android:textColor="@color/blue_font_yourney" />
 
     <Button
-        android:id="@+id/btn_fab1"
+        android:id="@+id/btn_counseling"
         android:layout_width="wrap_content"
         android:layout_height="58dp"
         android:layout_marginLeft="35dp"
@@ -39,7 +41,7 @@
         app:cornerRadius="8dp" />
 
     <Button
-        android:id="@+id/btn_fab2"
+        android:id="@+id/btn_chatbot"
         android:layout_width="170dp"
         android:layout_height="58dp"
         android:layout_marginLeft="210dp"
@@ -50,6 +52,5 @@
         android:textAllCaps="false"
         android:textSize="13sp"
         app:cornerRadius="10dp" />
-
 
 </FrameLayout>
