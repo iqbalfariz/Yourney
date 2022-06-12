@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dailycheckin.DailyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/blue_yourney">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/panah_daily" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/linotte_bold"
+                android:text="KONDISIMU"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/ed_city"
+            android:layout_width="365dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/shape_daily"
+            android:ems="10"
+            android:fontFamily="@font/linotte_regular"
+            android:hint="Tulis perasaanmu disini.."
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="85dp"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/blue_font_yourney"
+        android:text="Bagaimana perasaanmu hari ini?"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_pil1"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="265dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil1"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil2"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginLeft="45dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil2"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil3"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="345dp"
+        android:layout_marginLeft="70dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil3"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil4"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil4"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil5"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="415dp"
+        android:layout_marginLeft="45dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil5"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil6"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="45dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil6"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil7"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="485dp"
+        android:layout_marginLeft="65dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil7"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_pil8"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/blue_notPick"
+        app:cardCornerRadius="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:textColor="@color/black"
+        android:text="@string/pil8"
+        android:textAllCaps="false"
+        android:textSize="11dp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_kirim"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="665dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/blue_top_yourney"
+        android:gravity="center"
+        android:fontFamily="@font/linotte_bold"
+        android:text="Kirim"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:cornerRadius="8dp" />
+
+</FrameLayout>

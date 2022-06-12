@@ -71,4 +71,31 @@
     <string name="alert_logout">Apakah kamu yakin akan logout ?</string>
     <string name="content_alert_dialog">Data state login kamu akan terhapus, tapi email dan password kamu tetap aman kok :)</string>
     <string name="content_type_chatbot">Type a message</string>
+
+    <string name="Yourney">YOURNEY</string>
+    <string name="Welcome">Selamat Datang</string>
+    <string name="Kabar">Bagaimana Keadaanmu Hari ini?</string>
+    <string name="Potensi">Kenali potensi dirimu</string>
+    <string name="Artikel">Rekomendasi artikel untukmu</string>
+    <string name="Artikel1">10 Cara Kreatif Untuk Memperkenalkan Diri \nAgar Kamu Selalu Diingat</string>
+    <string name="isi1">Apakah kamu sering merasa malu dan takut untuk \nmemperkenalkan diri di depan banyak...</string>
+
+    <!-- floating action button-->
+    <string name="fab">INGIN KONSULTASI</string>
+    <string name="fab2">INGIN CURHAT</string>
+    <string name="fab3">APA YANG BISA NEY BANTU \nUNTUK KAMU?</string>
+    <string name="custom1">TERKIRIM!</string>
+    <string name="custom2">Terima Kasih. Kamu telah mengisi \nperasaan dan keluh kesah yang kamu alami \nhari ini. Apabila kamu sedang mengalami \nkesulitan, kamu dapat berbincang dengan aku, \nNey Smart Virtual Assistant.</string>
+    <string name="title_activity_daily">DailyActivity</string>
+
+    <!-- daily check in -->
+    <string name="pil1">Aku mengerjakan tugasku tanpa terganggu hal lain</string>
+    <string name="pil2">Aku lebih banyak belajar daripada bermain</string>
+    <string name="pil3">Aku banyak mengeksplor hal-hal baru</string>
+    <string name="pil4">Aku hari ini sangat sedih karena suatu hal</string>
+    <string name="pil5">Aku merasa tidak melakukan apa-apa hari ini</string>
+    <string name="pil6">Aku tidak fokus mengerjakan tugasku hari ini</string>
+    <string name="pil7">Aku bertengkar dengan orang tuaku</string>
+    <string name="pil8">Aku lebih banyak bermain daripada fokus meraih mimpiku</string>
+
 </resources>

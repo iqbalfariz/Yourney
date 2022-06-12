@@ -40,7 +40,7 @@
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_counseling.xml" value="0.13768115942028986" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_intro_counseling.xml" value="0.4" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_login.xml" value="0.2881578947368421" />
-        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_main.xml" value="0.24375" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_menu_counseling.xml" value="0.2" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_on_boarding.xml" value="0.176" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/activity_payment.xml" value="0.13768115942028986" />
@@ -50,6 +50,7 @@
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/custom_dialog_logout.xml" value="0.11806256306760847" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_first_screen.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_fourth_screen.xml" value="0.19021739130434784" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_intro.xml" value="0.20471014492753623" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_second_screen.xml" value="0.4" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/fragment_third_screen.xml" value="0.32525951557093424" />
@@ -62,6 +63,7 @@
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/message_item.xml" value="0.264" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/slide_item_container.xml" value="0.176" />
         <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/layout/test.xml" value="0.264" />
+        <entry key="..\:/Users/ibnumei/AndroidStudioProject/Project_Yourney/Yourney/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24375" />
       </map>
     </option>
   </component>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beranda"
+        android:title="Beranda"
+        android:icon="@drawable/ic_beranda"/>
+
+    <item
+        android:id="@+id/jelajah"
+        android:title="Jelajah"
+        android:icon="@drawable/ic_jelajah"/>
+
+    <item
+        android:id="@+id/icon"
+        android:title="Icon"
+        android:icon="@drawable/icon"/>
+
+    <item
+        android:id="@+id/jadwal"
+        android:title="Jadwal"
+        android:icon="@drawable/ic_jadwal"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"/>
+</menu>
