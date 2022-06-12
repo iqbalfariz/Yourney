@@ -47,7 +47,7 @@
     <string name="content_plot_three">Diskusikan permasalahan yang kamu alami bersama konselor dengan nyaman</string>
     <string-array name="data_recommend">
         <item>Who are you ?</item>
-        <item>Let's have a talk</item>
+        <item>Let\'s have a talk</item>
         <item>About counseling</item>
         <item>Mental health</item>
         <item>Insecure</item>

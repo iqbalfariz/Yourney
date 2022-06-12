@@ -85,7 +85,7 @@ class ChatbotActivity : AppCompatActivity() {
             chatbotBinding.edMessage.setText("")
 
             adapterMessage.insertMessage(Message(message, timeStamp,SEND_ID))
-            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
+            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount -1)
 
             botResponse(message)
         }
