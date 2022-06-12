@@ -11,7 +11,9 @@ import android.widget.*
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.izo.yourney.R
 import com.izo.yourney.data.local.StatePreference
 import com.izo.yourney.databinding.ActivityMainBinding
@@ -19,6 +21,7 @@ import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.chatbot.ChatbotActivity
 import com.izo.yourney.ui.counseling.intro.IntroCounselingActivity
 import com.izo.yourney.ui.customview.PasswordView
+import com.izo.yourney.ui.fragments.*
 import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
 import com.izo.yourney.ui.login.LoginActivity
 import com.izo.yourney.ui.onboarding.OnBoardingActivity
@@ -60,48 +63,89 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var bottomNavView : BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupViewModel()
-        clickEvents()
+//        setupViewModel()
+//        clickEvents()
 
+        supportActionBar?.hide()
+        bottomNavView = binding.BottomNavigationView
+
+        val homeFragment = HomeFragment()
+        val jelajahFragment = JelajahFragment()
+        val iconFragment = IconFragment()
+        val jadwalFragment = JadwalFragment()
+        val profileFragment = ProfileFragment()
+
+        setThatFragment(homeFragment)
+
+        bottomNavView.setOnItemReselectedListener {
+            when (it.itemId) {
+                R.id.beranda ->{
+                    setThatFragment(homeFragment)
+                }
+                R.id.jelajah ->{
+                    setThatFragment(jelajahFragment)
+                }
+                R.id.icon ->{
+                    setThatFragment(iconFragment)
+                }
+                R.id.jadwal ->{
+                    setThatFragment(jadwalFragment)
+                }
+                R.id.profile ->{
+                    setThatFragment(profileFragment)
+                }
+            }
+            true
+        }
 
     }
 
-    private fun setupViewModel() {
-        mainViewModel = ViewModelProvider(
-            this,
-            ViewModelFactory(StatePreference.getInstance(dataStore))
-        )[MainViewModel::class.java]
-    }
-
-    private fun clickEvents() {
-
-        // go to chatbot
-        binding.btnChatbot.setOnClickListener {
-            val intentToChatbot = Intent(this, ChatbotActivity::class.java)
-            startActivity(intentToChatbot)
-        }
-
-        // go to counseling
-        binding.btnCounseling.setOnClickListener {
-            val intentToCounseling = Intent(this, IntroCounselingActivity::class.java)
-            startActivity(intentToCounseling)
-        }
-
-        // logout
-        binding.btnLogout.setOnClickListener {
-//            mainViewModel.logout()
-//            val intentLogout = Intent(this, OnBoardingActivity::class.java)
-//            startActivity(intentLogout)
-//            finish()
-            showDialog()
+    private fun setThatFragment(fragment : Fragment)  =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frame,fragment)
+            commit()
         }
 
     }
+
+//    private fun setupViewModel() {
+//        mainViewModel = ViewModelProvider(
+//            this,
+//            ViewModelFactory(StatePreference.getInstance(dataStore))
+//        )[MainViewModel::class.java]
+//    }
+
+//    private fun clickEvents() {
+
+//        // go to chatbot
+//        binding.btnChatbot.setOnClickListener {
+//            val intentToChatbot = Intent(this, ChatbotActivity::class.java)
+//            startActivity(intentToChatbot)
+//        }
+//
+//        // go to counseling
+//        binding.btnCounseling.setOnClickListener {
+//            val intentToCounseling = Intent(this, IntroCounselingActivity::class.java)
+//            startActivity(intentToCounseling)
+//        }
+//
+//        // logout
+//        binding.btnLogout.setOnClickListener {
+////            mainViewModel.logout()
+////            val intentLogout = Intent(this, OnBoardingActivity::class.java)
+////            startActivity(intentLogout)
+////            finish()
+//            showDialog()
+//        }
+//
+//    }
 
     private fun showDialog() {
         val dialog = Dialog(this)

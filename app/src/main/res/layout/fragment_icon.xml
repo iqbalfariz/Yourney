@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.IconFragment">
+
+    <ImageView
+        android:id="@+id/fab_pict"
+        android:layout_width="370dp"
+        android:layout_height="484dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_fab" />
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="85dp"
+        android:text="@string/fab3"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_font_yourney" />
+
+    <Button
+        android:id="@+id/btn_fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="550dp"
+        android:fontFamily="@font/linotte_bold"
+        android:backgroundTint="@color/blue_top_yourney"
+        android:text="@string/fab"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_fab2"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="@color/blue_top_yourney"
+        android:fontFamily="@font/linotte_bold"
+        android:text="@string/fab2"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        app:cornerRadius="10dp" />
+
+
+</FrameLayout>
