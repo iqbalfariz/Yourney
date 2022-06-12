@@ -4,13 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izo.yourney.R
 import com.izo.yourney.data.AnswerResponse
+import com.izo.yourney.data.local.StatePreference
 import com.izo.yourney.data.remote.ApiConfig
 import com.izo.yourney.databinding.ActivityChatbotBinding
+import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.chatbot.Constants.RECEIVE_ID
 import com.izo.yourney.ui.chatbot.Constants.SEND_ID
+import com.izo.yourney.ui.login.LoginViewModel
 import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Response
@@ -22,6 +26,7 @@ class ChatbotActivity : AppCompatActivity() {
     private lateinit var chatbotBinding: ActivityChatbotBinding
     private val list = ArrayList<String>()
     private val timeStamp = Time.timeStamp()
+    private lateinit var chatbotViewModel: ChatbotViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +34,9 @@ class ChatbotActivity : AppCompatActivity() {
         setContentView(chatbotBinding.root)
         supportActionBar?.title = "Chatbot"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // setup view model
+        setupViewModel()
 
         // rv untuk chat
         recyclerViewMessage()
@@ -41,7 +49,11 @@ class ChatbotActivity : AppCompatActivity() {
         clickEvents()
 
 
+    }
 
+    private fun setupViewModel() {
+        chatbotViewModel = ViewModelProvider(
+            this, ViewModelProvider.NewInstanceFactory()).get(ChatbotViewModel::class.java)
     }
 
 
@@ -92,35 +104,46 @@ class ChatbotActivity : AppCompatActivity() {
 
     }
 
-    private fun botResponse(message: String){
-
-        GlobalScope.launch {
-            delay(1000)
-
-            withContext(Dispatchers.Main) {
-                val client = ApiConfig.getApiService().postMessage(message)
-                client.enqueue(object : retrofit2.Callback<AnswerResponse> {
-                    override fun onResponse(
-                        call: Call<AnswerResponse>,
-                        response: Response<AnswerResponse>
-                    ) {
-                        val responseBody = response.body()
-                        if (response.isSuccessful && responseBody != null) {
-                            adapterMessage.insertMessage(Message(responseBody.answer, timeStamp, RECEIVE_ID))
-                            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
-                        } else {
-                            Log.e("ChatbotActivity", "onFailure: ${response.message()}")
-                        }
-                    }
-
-                    override fun onFailure(call: Call<AnswerResponse>, t: Throwable) {
-                        Log.e("ChatbotActivity", "onFailure: ${t.message}")
-                    }
-
-                })
-            }
+    private fun botResponse(message: String) {
+        // get answer from api
+        chatbotViewModel.answer.observe(this) { answer ->
+            adapterMessage.insertMessage(Message(answer, timeStamp, RECEIVE_ID))
+            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
         }
+
+        // post message to api
+        chatbotViewModel.postMessage(message)
     }
+
+//    private fun botResponse(message: String){
+//
+//        GlobalScope.launch {
+//            delay(1000)
+//
+//            withContext(Dispatchers.Main) {
+//                val client = ApiConfig.getApiService().postMessage(message)
+//                client.enqueue(object : retrofit2.Callback<AnswerResponse> {
+//                    override fun onResponse(
+//                        call: Call<AnswerResponse>,
+//                        response: Response<AnswerResponse>
+//                    ) {
+//                        val responseBody = response.body()
+//                        if (response.isSuccessful && responseBody != null) {
+//                            adapterMessage.insertMessage(Message(responseBody.answer, timeStamp, RECEIVE_ID))
+//                            chatbotBinding.rvMessage.scrollToPosition(adapterMessage.itemCount - 1)
+//                        } else {
+//                            Log.e("ChatbotActivity", "onFailure: ${response.message()}")
+//                        }
+//                    }
+//
+//                    override fun onFailure(call: Call<AnswerResponse>, t: Throwable) {
+//                        Log.e("ChatbotActivity", "onFailure: ${t.message}")
+//                    }
+//
+//                })
+//            }
+//        }
+//    }
 
     override fun onStart() {
         super.onStart()
