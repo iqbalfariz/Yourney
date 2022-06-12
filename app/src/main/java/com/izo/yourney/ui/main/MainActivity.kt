@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var bottomNavView : BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,10 +74,44 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //        clickEvents()
 
         supportActionBar?.hide()
+        bottomNavView = binding.BottomNavigationView
 
+        val homeFragment = HomeFragment()
+        val jelajahFragment = JelajahFragment()
+        val iconFragment = IconFragment()
+        val jadwalFragment = JadwalFragment()
+        val profileFragment = ProfileFragment()
+
+        setThatFragment(homeFragment)
+
+        bottomNavView.setOnItemReselectedListener {
+            when (it.itemId) {
+                R.id.beranda ->{
+                    setThatFragment(homeFragment)
+                }
+                R.id.jelajah ->{
+                    setThatFragment(jelajahFragment)
+                }
+                R.id.icon ->{
+                    setThatFragment(iconFragment)
+                }
+                R.id.jadwal ->{
+                    setThatFragment(jadwalFragment)
+                }
+                R.id.profile ->{
+                    setThatFragment(profileFragment)
+                }
+            }
+            true
+        }
 
     }
 
+    private fun setThatFragment(fragment : Fragment)  =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frame,fragment)
+            commit()
+        }
 
 
     override fun onClick(p0: View?) {
