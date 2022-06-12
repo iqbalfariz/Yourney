@@ -24,9 +24,42 @@ class DailyActivity : AppCompatActivity() {
         supportActionBar?.title = "Daily Activity"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        clickEvents()
+    }
+
+    private fun clickEvents() {
         binding.btnSend.setOnClickListener {
             showDialog()
         }
+
+        binding.btnPil1.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil1.text)
+        }
+
+        binding.btnPil2.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil2.text)
+        }
+
+        binding.btnPil3.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil3.text)
+        }
+
+        binding.btnPil4.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil4.text)
+        }
+
+        binding.btnPil5.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil5.text)
+        }
+
+        binding.btnPil6.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil6.text)
+        }
+
+        binding.btnPil7.setOnClickListener {
+            binding.edFeeling.setText(binding.btnPil7.text)
+        }
+
     }
 
     private fun showDialog() {

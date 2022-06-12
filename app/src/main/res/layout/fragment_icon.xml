@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.IconFragment">
+    tools:context=".ui.fragments.IconFragment"
+    android:background="@color/white"
+    >
 
     <ImageView
         android:id="@+id/fab_pict"
@@ -50,6 +52,5 @@
         android:textAllCaps="false"
         android:textSize="13sp"
         app:cornerRadius="10dp" />
-
 
 </FrameLayout>

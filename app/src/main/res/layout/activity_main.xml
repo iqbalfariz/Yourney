@@ -7,12 +7,416 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-
-    <FrameLayout
-        android:id="@+id/frame"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="@string/Welcome"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"/>
+
+                <TextView
+                    android:id="@+id/tv_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="username"
+                    android:textColor="@color/blue_font_yourney"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/avatar_user">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_kabar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/linotte_bold"
+            android:text="@string/Kabar"
+            android:textSize="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="23dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_top"
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_kabar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="9dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_kabar">
+
+            <LinearLayout
+                android:id="@+id/btn_very_good"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/urday_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sangatbaik_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Sangat \nBaik"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_good"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="115dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/urday_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baik_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Baik"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_bad"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/urday_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/buruk_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Buruk"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_very_bad"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/urday_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sangatburuk_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Sangat \nBuruk"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title_potensi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/linotte_bold"
+            android:text="@string/Potensi"
+            android:textSize="15dp"
+            android:layout_marginStart="23dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_kabar"
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_potensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_potensi">
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_potensi"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/white_ellipse" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="-55dp"
+                    android:src="@drawable/ic_prefensi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Prefensi Diri"
+                    android:textAlignment="center"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_potensi"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/white_ellipse" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="-50dp"
+                    android:src="@drawable/ic_minat_bakat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Minat Bakat"
+                    android:textAlignment="center"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="275dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_potensi"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/white_ellipse" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="-53dp"
+                    android:src="@drawable/ic_century_skill" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Century Skill"
+                    android:textAlignment="center"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_price_counseling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_potensi">
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="130dp"
+                android:background="@drawable/shape_konsultasi"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/shape_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="-48dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="LAYANAN KONSULTASI DENGAN \nKONSELOR"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_font_yourney"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Konsultasi"
+                    android:textAlignment="center"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Mulai dari Rp 100.000 - Rp 300.000"
+                    android:textAlignment="center"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginTop="-30dp"
+                    android:backgroundTint="@color/blue_yourney"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Mulai"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="-25dp"
+                    android:fontFamily="@font/linotte_bold"
+                    android:text="Mulai"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:cornerRadius="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/BottomAppBar"
         android:layout_width="match_parent"

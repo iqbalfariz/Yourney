@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.izo.yourney.data.local.StatePreference
 import com.izo.yourney.ui.fragments.HomeViewModel
 import com.izo.yourney.ui.login.LoginViewModel
+import com.izo.yourney.ui.main.MainViewModel
 import com.izo.yourney.ui.onboarding.OnBoardingViewModel
 import com.izo.yourney.ui.persona.AboutThreeViewModel
 import com.izo.yourney.ui.splashscreen.SplashScreenViewModel
@@ -23,11 +24,14 @@ class ViewModelFactory(private val pref: StatePreference) : ViewModelProvider.Ne
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(pref) as T
             }
-            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
-                HomeViewModel(pref) as T
+            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
+                MainViewModel(pref) as T
             }
             modelClass.isAssignableFrom(AboutThreeViewModel::class.java) -> {
                 AboutThreeViewModel(pref) as T
+            }
+            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
+                HomeViewModel(pref) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

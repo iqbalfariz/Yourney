@@ -101,8 +101,7 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="170dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/avatar_user"
-                >
+                android:src="@drawable/avatar_user">
 
             </ImageView>
 

@@ -4,47 +4,47 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="yourney">YOURNEY</string>
     <string name="webclientid">911094781711-t54bnnkef8p9oqhvqrlsi3hiann9t201.apps.googleusercontent.com</string>
-    <string name="title_content">Ketahui Potensi Dalam Dirimu Dengan Mudah</string>
-    <string name="content_screen1">Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.</string>
-    <string name="lewati">Lewati</string>
-    <string name="next">Lanjut</string>
-    <string name="forget">Lupa Kata Sandi ?</string>
-    <string name="intro_login">Hai, Selamat \n Datang Kembali !</string>
-    <string name="content_btnFb">Masuk dengan Facebook</string>
-    <string name="content_btnGoogle">Masuk dengan Google</string>
-    <string name="intro_regis">Hai! \n Selamat Datang..</string>
-    <string name="content_checkbox">Saya setuju dengan Ketentuan Penggunaan dan Kebijakan Privasi Yourney</string>
-    <string name="halo_naili">Halo, Naili</string>
-    <string name="content_signUpIntro">Aku adalah <b> Ney </b> Smart Virtual assistant yang dapat menjadi temanmu dalam meraih masa depan yang kamu inginkan. Bantu aku untuk mengenalmu lebih dalam yuk!</string>
-    <string name="title_about_one">Dimana kamu tinggal ?</string>
-    <string name="content_edCity">Masukkan nama kota/kabupaten</string>
-    <string name="content_birthday">Masukkan tanggal lahirmu</string>
+    <string name="title_content">Recognize your potential</string>
+    <string name="content_screen1">YOURNEY helps you recognize your potential with test and questions, so you can easily find out and develop your potential with YOURNEY</string>
+    <string name="lewati">Skip</string>
+    <string name="next">Next</string>
+    <string name="forget">Forget your password ?</string>
+    <string name="intro_login">Hello, Welcome \n Back !</string>
+    <string name="content_btnFb">Login with Facebook</string>
+    <string name="content_btnGoogle">Login with Google</string>
+    <string name="intro_regis">Hello! \n Welcome..</string>
+    <string name="content_checkbox">I agreed with the Terms of Use and Privacy Policy</string>
+    <string name="halo_naili">Hello, Naili</string>
+    <string name="content_signUpIntro">I am <b> Ney </b> Smart Virtual assistant who can be your friend to achieve the future you want. Help me to get to know you better!</string>
+    <string name="title_about_one">Where do you live ?</string>
+    <string name="content_edCity">Write your city here..</string>
+    <string name="content_birthday">Choose your birth date</string>
     <string name="content_btnDatePicker">JAN 01 2020</string>
-    <string name="content_titleGender">Pilih jenis kelaminmu</string>
-    <string name="content_male">Laki - Laki</string>
-    <string name="content_female">Perempuan</string>
-    <string name="content_next">Selanjutnya</string>
-    <string name="content_start">Mulai</string>
-    <string name="content_pass">Lewati</string>
-    <string name="title_aboutTwo">Pilih jenjang pendidikanmu saat ini</string>
-    <string name="title_noTelp">Masukkan nomor teleponmu</string>
-    <string name="content_edPhoneNumber">Masukan nomor</string>
-    <string name="title_aboutThree">Mimpi apa yang ingin kamu raih dimasa depan ?</string>
-    <string name="content_edDream">Tulis mimpimu</string>
-    <string name="title_hobby">Masukkan hobi dan ketertarikanmu</string>
-    <string name="content_edHobby">Tulis hobimu</string>
-    <string name="content_radio1">Belum Kepikiran</string>
-    <string name="content_radio2">Masih belum yakin</string>
-    <string name="content_dialog">Terimakasih telah melengkapi profilmu. Aku akan menemani dan membimbingmu dalam meraih mimpi yang kamu inginkan.</string>
-    <string name="title_dialog">Pendaftaran Berhasil</string>
-    <string name="tentang_konsultasi">Tentang Konsultasi</string>
-    <string name="about_counseling">Konseling merupakan kegiatan yang berguna untuk membantu mu untuk meraih masa depanmu. Kamu akan dibantu oleh seorang konselor untuk menyelesaikan permasalahan dan membantu kebutuhan mu.</string>
-    <string name="tentang_konselor">Tentang Konselor</string>
-    <string name="about_conselor_content">Konselor merupakan seseorang yang akan membantumu dalam menyelesaikan permasalahan yang sedang kamu alami. konselor tidak akan memberikanmu nasihat tentang bagaimana cara untuk menyelesaikan permasalahanmu, melainkan akan mengarahkan dan membimbingmu untuk menyelesaikan permasalahan tersebut. konselor akan mengajakmu berdiskusi supaya kamu dapat menyelesaikan permasalahan tersebut.</string>
-    <string name="alur_konsultasi">Alur Konsultasi</string>
-    <string name="content_plot_one">Pilih topik dan paket konseling yang kamu inginkan</string>
-    <string name="content_plot_two">Setelah pembayaran selesai, kamu dan konselor dapat menyesuaikan jadwal untuk melakukan konseling</string>
-    <string name="content_plot_three">Diskusikan permasalahan yang kamu alami bersama konselor dengan nyaman</string>
+    <string name="content_titleGender">Select your gender</string>
+    <string name="content_male">Boy</string>
+    <string name="content_female">Girl</string>
+    <string name="content_next">Next</string>
+    <string name="content_start">Start</string>
+    <string name="content_pass">Skip</string>
+    <string name="title_aboutTwo">choose your educational attainment</string>
+    <string name="title_noTelp">Enter your phone number</string>
+    <string name="content_edPhoneNumber">Write your phone number here..</string>
+    <string name="title_aboutThree">What do you want to achieve in the future ?</string>
+    <string name="content_edDream">Write your dreams</string>
+    <string name="title_hobby">Enter your hobby</string>
+    <string name="content_edHobby">Write your hobby</string>
+    <string name="content_radio1">Haven\'t thought</string>
+    <string name="content_radio2">Still not sure</string>
+    <string name="content_dialog">Thank you for completing your profile. I will accompany and guide you in achieving the dream that you want.</string>
+    <string name="title_dialog">Registration Success</string>
+    <string name="tentang_konsultasi">About Consultasion</string>
+    <string name="about_counseling">Counseling is an activity to help you achieve your future. You will be assisted by a counselor to solve problems and help you.</string>
+    <string name="tentang_konselor">About Counselor</string>
+    <string name="about_conselor_content">A counselor is someone who will help you in solving your problems. The counselor will not just give you advice on how to solve your problem, but will direct and guide you to solve your problems. The counselor will engage you to discuss so you can solve the problem.</string>
+    <string name="alur_konsultasi">Consultation flow</string>
+    <string name="content_plot_one">Choose the topic and counseling package you want</string>
+    <string name="content_plot_two">After payment, you and your counselor can adjust the schedule for counseling</string>
+    <string name="content_plot_three">Discuss your problems with counselor comfortably</string>
     <string-array name="data_recommend">
         <item>Who are you ?</item>
         <item>Let\'s have a talk</item>
@@ -54,49 +54,46 @@
         <item>Anxiety</item>
     </string-array>
     <string-array name="recommend_hobby">
-        <item>Menulis</item>
-        <item>Membaca</item>
-        <item>Dengar Musik</item>
-        <item>Bermain Game</item>
-        <item>Menggambar</item>
-        <item>Olahraga</item>
-        <item>Memasak</item>
-        <item>Memancing</item>
+        <item>Writing</item>
+        <item>Reading</item>
+        <item>Listening to music</item>
+        <item>Playing a game</item>
+        <item>Drawing</item>
+        <item>Sport</item>
+        <item>Cooking</item>
+        <item>Fishing</item>
     </string-array>
-    <string name="title_dialog_payment">TRANSAKSI BERHASIL</string>
-    <string name="content_dialog_payment">Terimakasih telah memilih layanan konsultasi yang tersedia. Kamu dapat memulai konsultasi sekarang juga dengan menekan tombol ok di bawah ini.</string>
-    <string name="content_voucher">Gunakan Voucher yang kamu miliki untuk mendapatkan potongan harga konseling</string>
+    <string name="title_dialog_payment">TRANSACTION SUCCESS</string>
+    <string name="content_dialog_payment">TThank you for choosing the available consulting services. You can start the consultation right now by pressing the ok button below.</string>
+    <string name="content_voucher">Use your Voucher to get a counseling discount</string>
     <string name="price_packet_one">Rp100.000</string>
     <string name="price_packet_two">Rp300.000</string>
-    <string name="alert_logout">Apakah kamu yakin akan logout ?</string>
-    <string name="content_alert_dialog">Data state login kamu akan terhapus, tapi email dan password kamu tetap aman kok :)</string>
+    <string name="alert_logout">Are you sure want to logout ?</string>
     <string name="content_type_chatbot">Type a message</string>
 
     <string name="Yourney">YOURNEY</string>
-    <string name="Welcome">Selamat Datang</string>
-    <string name="Kabar">Bagaimana Keadaanmu Hari ini?</string>
-    <string name="Potensi">Kenali potensi dirimu</string>
-    <string name="Artikel">Rekomendasi artikel untukmu</string>
-    <string name="Artikel1">10 Cara Kreatif Untuk Memperkenalkan Diri \nAgar Kamu Selalu Diingat</string>
-    <string name="isi1">Apakah kamu sering merasa malu dan takut untuk \nmemperkenalkan diri di depan banyak...</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Kabar">How was your day?</string>
+    <string name="Potensi">Recognize your potential</string>
 
     <!-- floating action button-->
-    <string name="fab">INGIN KONSULTASI</string>
-    <string name="fab2">INGIN CURHAT</string>
-    <string name="fab3">APA YANG BISA NEY BANTU \nUNTUK KAMU?</string>
-    <string name="custom1">TERKIRIM!</string>
-    <string name="custom2">Terima Kasih. Kamu telah mengisi \nperasaan dan keluh kesah yang kamu alami \nhari ini. Apabila kamu sedang mengalami \nkesulitan, kamu dapat berbincang dengan aku, \nNey Smart Virtual Assistant.</string>
+    <string name="fab">NEED CONSULTATION</string>
+    <string name="fab2">NEED CONFIDE</string>
+    <string name="fab3">WHAT CAN I DO \nTO HELP YOU?</string>
+    <string name="custom1">SEND!</string>
+    <string name="custom2">Thank you for telling us about your feeling today. If you had a trouble, you can talk to us, \nNey Smart Virtual Assistant.</string>
     <string name="title_activity_daily">DailyActivity</string>
 
     <!-- daily check in -->
-    <string name="pil1">Aku mengerjakan tugasku tanpa terganggu hal lain</string>
-    <string name="pil2">Aku lebih banyak belajar daripada bermain</string>
-    <string name="pil3">Aku banyak mengeksplor hal-hal baru</string>
-    <string name="pil4">Aku hari ini sangat sedih karena suatu hal</string>
-    <string name="pil5">Aku merasa tidak melakukan apa-apa hari ini</string>
-    <string name="pil6">Aku tidak fokus mengerjakan tugasku hari ini</string>
-    <string name="pil7">Aku bertengkar dengan orang tuaku</string>
-    <string name="pil8">Aku lebih banyak bermain daripada fokus meraih mimpiku</string>
+    <string name="pil1">I do my homework without being distracted by anything else</string>
+    <string name="pil2">I studied well today</string>
+    <string name="pil3">I explore a lot of new things today</string>
+    <string name="pil4">I really sad because of something</string>
+    <string name="pil5">I felt like I do nothing</string>
+    <string name="pil6">I\'m not focus doing my homework</string>
+    <string name="pil7">I had fight with my parents</string>
+    <string name="pil8">I really wasted my time</string>
+
     <string name="title_dialog_daily">Terkirim</string>
     <string name="content_dialog_daily">Terima kasih, Syakillah. Kamu telah mengisi Perasaan dan keluh kesah yang kamu alami hari ini. Apabila kamu sedang mengalami kesulitan, kamu dapat berbincang dengan Aku, Ney Smart Virtual Assistant.</string>
 

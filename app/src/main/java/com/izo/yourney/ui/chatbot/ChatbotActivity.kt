@@ -28,7 +28,7 @@ class ChatbotActivity : AppCompatActivity() {
         chatbotBinding = ActivityChatbotBinding.inflate(layoutInflater)
         setContentView(chatbotBinding.root)
         supportActionBar?.title = "Chatbot"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // rv untuk chat
         recyclerViewMessage()
@@ -133,10 +133,10 @@ class ChatbotActivity : AppCompatActivity() {
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressed()
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if (item.itemId == android.R.id.home) {
+//            onBackPressed()
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 }
