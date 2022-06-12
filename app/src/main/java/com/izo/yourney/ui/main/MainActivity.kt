@@ -76,6 +76,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.hide()
         bottomNavView = binding.BottomNavigationView
 
+        val mFragmentManager = supportFragmentManager
+
         val homeFragment = HomeFragment()
         val jelajahFragment = JelajahFragment()
         val iconFragment = IconFragment()
@@ -103,6 +105,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
             true
+        }
+
+        binding.btnFab.setOnClickListener {
+
+            val mIconFragment = IconFragment()
+            val fragment = mFragmentManager.findFragmentByTag(IconFragment::class.java.simpleName)
+
+            if (fragment !is IconFragment) {
+                mFragmentManager
+                    .beginTransaction()
+                    .add(R.id.frame_container, mIconFragment, IconFragment::class.java.simpleName)
+                    .commit()
+            }
         }
 
     }

@@ -4,6 +4,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -12,9 +13,16 @@ class StatePreference private constructor(private val dataStore: DataStore<Prefe
     fun getState(): Flow<StateModel> {
         return dataStore.data.map { preferences ->
             StateModel(
+                preferences[USERNAME_KEY] ?: "",
                 preferences[ENTER_KEY] ?: false,
                 preferences[LOGIN_KEY] ?: false
             )
+        }
+    }
+
+    suspend fun saveUsername(username: String?) {
+        dataStore.edit { preferences ->
+            preferences[USERNAME_KEY] = username!!
         }
     }
 
@@ -40,6 +48,7 @@ class StatePreference private constructor(private val dataStore: DataStore<Prefe
         @Volatile
         private var INSTANCE: StatePreference? = null
 
+        private val USERNAME_KEY = stringPreferencesKey("username")
         private val ENTER_KEY = booleanPreferencesKey("enter")
         private val LOGIN_KEY = booleanPreferencesKey("login")
 

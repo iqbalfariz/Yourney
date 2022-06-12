@@ -40,6 +40,7 @@
 
 
                 <ImageView
+                    android:id="@+id/btn_logout"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="-45dp"
@@ -128,6 +129,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/btn_very_good"
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="20dp"
@@ -155,6 +157,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_good"
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="115dp"
@@ -182,6 +185,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_bad"
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="210dp"
@@ -209,6 +213,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_very_bad"
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="305dp"
