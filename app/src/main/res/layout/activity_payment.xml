@@ -37,7 +37,7 @@
 
         android:layout_marginTop="8dp"
         android:fontFamily="@font/linotte_semi_bold"
-        android:text="Paket :"
+        android:text="Package :"
         android:textColor="@color/blue_font_yourney"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
 
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/linotte_semi_bold"
-        android:text="Paket Super Tenang"
+        android:text="Super Tenang Package"
         android:textColor="@color/blue_font_yourney"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
         android:layout_marginTop="8dp"
 
         android:layout_marginEnd="24dp"
-        android:text="Menunggu konfirmasi"
+        android:text="Loading"
         android:fontFamily="@font/linotte_semi_bold"
         android:textSize="12sp"
         android:textColor="@color/blue_font_yourney"
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
-        android:text="Pilih Metode Pembayaran"
+        android:text="Choose payment method"
         android:fontFamily="@font/linotte_bold"
         android:textSize="14sp"
         android:textColor="@color/blue_font_yourney"
@@ -316,7 +316,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
-        android:text="Detail Pembayaran"
+        android:text="Payment Details"
         android:fontFamily="@font/linotte_bold"
         android:textColor="@color/blue_font_yourney"
         android:textSize="14sp"
@@ -346,7 +346,7 @@
 
         android:layout_marginTop="8dp"
 
-        android:text="Harga"
+        android:text="Price"
         android:fontFamily="@font/linotte_semi_bold"
         android:textColor="@color/blue_font_yourney"
         android:textSize="13sp"
@@ -378,7 +378,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="5dp"
-        android:text="Voucher yang digunakan"
+        android:text="Voucher Used"
         android:fontFamily="@font/linotte_semi_bold"
         android:textColor="@color/blue_font_yourney"
         android:textSize="13sp"
@@ -421,7 +421,7 @@
 
         android:layout_marginTop="15dp"
 
-        android:text="Total Pembayaran"
+        android:text="Total Payment"
         android:fontFamily="@font/linotte_bold"
         android:textColor="@color/blue_font_yourney"
         android:textSize="14sp"
@@ -455,7 +455,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/linotte_bold"
-        android:text="Konfirmasi"
+        android:text="Confirmation"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:cornerRadius="8dp"
