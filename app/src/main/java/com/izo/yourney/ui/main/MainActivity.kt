@@ -36,7 +36,11 @@ class MainActivity : AppCompatActivity() {
         bottomNavView = binding.BottomNavigationView
 
         mainViewModel.getState().observe(this) { state ->
-            binding.tvUname.text = state.username
+            if (state.username == "") {
+                binding.tvUname.text = "Friney"
+            } else {
+                binding.tvUname.text = state.username
+            }
         }
 
     }

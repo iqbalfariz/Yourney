@@ -28,9 +28,6 @@
             android:name=".ui.counseling.intro.IntroCounselingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.counseling.CounselingActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
