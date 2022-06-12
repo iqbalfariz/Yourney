@@ -20,44 +20,29 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/alert_logout"
-        android:gravity="center"
         android:fontFamily="@font/linotte_bold"
-        android:textSize="18sp"
+        android:gravity="center"
+        android:text="@string/alert_logout"
         android:textColor="@color/blue_font_yourney"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        />
-
-    <TextView
-        android:id="@+id/tv_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:textAlignment="center"
-        android:text="@string/content_alert_dialog"
-        android:fontFamily="@font/linotte_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/btn_yes"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/linotte_bold"
         android:text="Yes"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@id/tv_content" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineVertical"
@@ -73,13 +58,14 @@
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/linotte_bold"
         android:text="No"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

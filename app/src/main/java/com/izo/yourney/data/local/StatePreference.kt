@@ -32,7 +32,6 @@ class StatePreference private constructor(private val dataStore: DataStore<Prefe
 
     suspend fun logout() {
         dataStore.edit { preferences ->
-            preferences[ENTER_KEY] = false
             preferences[LOGIN_KEY] = false
         }
     }

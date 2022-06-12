@@ -19,6 +19,7 @@ import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.chatbot.ChatbotActivity
 import com.izo.yourney.ui.counseling.intro.IntroCounselingActivity
 import com.izo.yourney.ui.customview.PasswordView
+import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
 import com.izo.yourney.ui.login.LoginActivity
 import com.izo.yourney.ui.onboarding.OnBoardingActivity
 import com.izo.yourney.ui.splashscreen.SplashScreenViewModel
@@ -114,7 +115,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         btnYes.setOnClickListener {
             mainViewModel.logout()
-            val intentLogout = Intent(this, OnBoardingActivity::class.java)
+            val intentLogout = Intent(this, LaunchScreenActivity::class.java)
             startActivity(intentLogout)
             finish()
             dialog.dismiss()
