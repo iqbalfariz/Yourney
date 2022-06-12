@@ -36,23 +36,23 @@ class OnBoardingActivity : AppCompatActivity() {
     private val viewPagerAdapter = ViewPagerAdapter(
         listOf(
             IntroSlide(
-                "Ketahui Potensi Dalam Dirimu Dengan Mudah",
-                "Aplikasi YOURNEY membantumu mengenali Potensi yang ada di dalam diri melalui serangkaian tes dan pertanyaan, sehingga kamu dengan mudah mengetahui dan mengembangkan potensimu bersama YOURNEY.",
+                "Recognize your potential",
+                "YOURNEY helps you recognize your potential with test and questions, so you can easily find out and develop your potential with YOURNEY",
                 R.drawable.image_page1
             ),
             IntroSlide(
-                "Buat Harimu Lebih Produktif Dengan Mencatat Jadwal",
-                "Aplikasi YOURNEY membantumu dalam membuat jadwal harian maupun jadwal lain agar lebih mempermudah kamu dalam beraktivitas.",
+                "Make your day more productive by making an schedule",
+                "YOURNEY help you to make an daily schedule activity or any schedule to make it easier for you.",
                 R.drawable.image_page2
             ),
             IntroSlide(
-                "Gapai Masa Depan Bersama Ney Smart Virtual Assistant",
-                "Aplikasi YOURNEY memiliki smart virtual assistant yang dapat membantu kamu dalam memberi tahu dan merekomendasikan minat kamu untuk mencapai masa depan dengan kemampuan yang sesuai. ",
+                "Reach your dream future with Ney Smart Virtual Assistant",
+                "YOURNEY have a smart virtual assistant that can help you to get know where you get interest in to achieve the dream future you want. ",
                 R.drawable.image_page3
             ),
             IntroSlide(
-                "Konsultasikan Masalahmu dengan Konselor",
-                "Aplikasi YOURNEY memiliki layanan konsultasi untuk membantu kamu menyelesaikan permasalahan yang sedang kamu alami dalam menggapai mimpimu.",
+                "Consultation with counselor",
+                "YOURNEY have some consultation service to help you solve your problem.",
                 R.drawable.image_page4
             )
         )

@@ -16,7 +16,10 @@
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_about_one.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_about_three.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_about_two.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_chatbot.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_counseling.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_daily.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_intro_counseling.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_launch_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -27,10 +30,15 @@
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/custom_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/custom_dialog_logout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/fragment_icon.xml" value="0.1" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/fragment_jadwal.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/fragment_jelajah.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/item_container_bot_message.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/item_container_recommend_hobby.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/item_container_recommend_message.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/item_container_user_message.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/message_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USER/Downloads/yourneyy/app/src/main/res/layout/slide_item_container.xml" value="0.20416666666666666" />

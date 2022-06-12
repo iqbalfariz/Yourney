@@ -52,7 +52,7 @@
             android:background="@drawable/shape_daily"
             android:ems="10"
             android:fontFamily="@font/linotte_regular"
-            android:hint="Tulis perasaanmu disini.."
+            android:hint="Write your feeling here.."
             android:inputType="text"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -70,7 +70,7 @@
         android:layout_marginTop="85dp"
         android:fontFamily="@font/linotte_bold"
         android:textColor="@color/blue_font_yourney"
-        android:text="Bagaimana perasaanmu hari ini?"
+        android:text="How was your day?"
         android:textSize="20dp">
 
     </TextView>
@@ -213,7 +213,7 @@
         android:backgroundTint="@color/blue_top_yourney"
         android:gravity="center"
         android:fontFamily="@font/linotte_bold"
-        android:text="Kirim"
+        android:text="Send"
         android:textAllCaps="false"
         android:textSize="20sp"
         app:cornerRadius="8dp" />
