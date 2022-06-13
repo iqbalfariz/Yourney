@@ -1,17 +1,25 @@
 package com.izo.yourney.ui.main
 
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.Window
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.izo.yourney.R
 import com.izo.yourney.data.local.StatePreference
 import com.izo.yourney.ui.ViewModelFactory
 import com.izo.yourney.ui.dailycheckin.DailyActivity
+import com.izo.yourney.ui.launchscreen.LaunchScreenActivity
+import com.izo.yourney.ui.login.LoginActivity
 import com.izo.yourney.ui.option.OptionActivity
 
 
@@ -32,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         setupViewModel()
         clickEvents()
 
-        supportActionBar?.hide()
         bottomNavView = binding.BottomNavigationView
 
         mainViewModel.getState().observe(this) { state ->
@@ -79,5 +86,47 @@ class MainActivity : AppCompatActivity() {
         )[MainViewModel::class.java]
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.option_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+//        mainViewModel.logout()
+//        val moveToWelcome = Intent(this, WelcomeActivity::class.java)
+//        startActivity(moveToWelcome)
+//        finish()
+        showDialog()
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun showDialog() {
+
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_dialog_logout)
+
+
+        val btnOk = dialog.findViewById<Button>(R.id.btn_yes)
+        val btnNo = dialog.findViewById<Button>(R.id.btn_no)
+
+        btnOk.setOnClickListener {
+            val intent = Intent(this, LaunchScreenActivity::class.java)
+            startActivity(intent)
+            finish()
+            dialog.dismiss()
+        }
+
+        btnNo.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+
+    }
 
 }
