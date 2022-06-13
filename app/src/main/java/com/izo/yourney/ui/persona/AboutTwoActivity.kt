@@ -18,6 +18,13 @@ class AboutTwoActivity : AppCompatActivity() {
         binding = ActivityAboutTwoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        clickEvents()
+
+        study = ""
+        phoneNumber = ""
+    }
+
+    private fun clickEvents() {
         binding.tvSma.setOnClickListener {
             study = "SMA"
             binding.tvSma.setBackgroundResource(R.drawable.circle_picker_bg)
@@ -66,7 +73,5 @@ class AboutTwoActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-
     }
 }

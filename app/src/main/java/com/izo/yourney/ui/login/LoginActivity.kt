@@ -154,7 +154,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     loginViewModel.login()
-                    Toast.makeText(this, "Selamat datang $email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Welcome $email", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()

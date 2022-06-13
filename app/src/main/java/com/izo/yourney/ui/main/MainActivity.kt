@@ -115,6 +115,7 @@ class MainActivity : AppCompatActivity() {
         val btnNo = dialog.findViewById<Button>(R.id.btn_no)
 
         btnOk.setOnClickListener {
+            mainViewModel.logout()
             val intent = Intent(this, LaunchScreenActivity::class.java)
             startActivity(intent)
             finish()

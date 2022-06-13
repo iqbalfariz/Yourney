@@ -13,6 +13,7 @@ class AboutOneActivity() : AppCompatActivity() {
     private lateinit var binding: ActivityAboutOneBinding
     private lateinit var gender: String
     private lateinit var city: String
+    private lateinit var born: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +21,17 @@ class AboutOneActivity() : AppCompatActivity() {
         setContentView(binding.root)
 
         clickEvents()
-
+        city = ""
+        born = ""
+        gender = ""
     }
 
 
     private fun clickEvents() {
 
         val current = Calendar.getInstance()
-        var born = ""
+
+
         binding.bornDate.init(
             current.get(Calendar.YEAR),
             current.get(Calendar.MONTH),
@@ -54,19 +58,21 @@ class AboutOneActivity() : AppCompatActivity() {
         }
 
         binding.btnNext.setOnClickListener {
-            city = binding.edCity.text.toString()
 
             val bundle = intent.extras
+            city = binding.edCity.text.toString()
 
             val intent = Intent(this, AboutTwoActivity::class.java)
             bundle?.putString("city", city)
             bundle?.putString("born", born)
             bundle?.putString("gender", gender)
+
             if (bundle != null) {
                 intent.putExtras(bundle)
             }
             startActivity(intent)
             finish()
+
         }
 
     }

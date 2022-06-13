@@ -48,6 +48,8 @@ class AboutThreeActivity : AppCompatActivity() {
 
         // click events
         clickEvents()
+        dream = ""
+        hobby = ""
     }
 
     private fun setupViewModel() {
@@ -111,14 +113,14 @@ class AboutThreeActivity : AppCompatActivity() {
                     aboutThreeViewModel.saveUsername(username)
                     Toast.makeText(
                         applicationContext,
-                        "Data Berhasil ditambahkan",
+                        "Data Added Suuccesfully",
                         Toast.LENGTH_SHORT
                     ).show()
                     showDialog()
 
                 }
             } else {
-                Toast.makeText(applicationContext, "Data ada yang belum terisi", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "There are data that have not been filled in", Toast.LENGTH_SHORT)
                     .show()
             }
 
